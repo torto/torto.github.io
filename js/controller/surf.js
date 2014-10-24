@@ -12,7 +12,7 @@ var app = {
 
         this.carregarOndas();
         this.carregarSurfista();
-        
+
     },
     carregarOndas: function() {
         // MAR CONFIGURAÇAO
@@ -39,7 +39,7 @@ var app = {
         this.gameInjecaoMar.addChild(this.elMar3);
         this.gameInjecaoMar.addChild(this.elMar2);
         this.gameInjecaoMar.addChild(this.elMar1);
-        this.gameInjecaoMar.addChild(this.elMar); 
+        this.gameInjecaoMar.addChild(this.elMar);
 
     },
     carregarSurfista: function() {
@@ -71,16 +71,31 @@ var app = {
         //------------------------
         app.renderer.render(app.stage);
         requestAnimFrame(app.animate);
-    }, carregarInicioJogo: function(){
+    },
+    carregarInicioJogo: function() {
         this.play = true;
         controlesJogo.controleSurfista();
     }
 }
 
 var controlesJogo = {
-    controleSurfista: function(){
-        Mousetrap.bind('right', function(){
-            app.elSurfista.position.x += 1;
+    controleSurfista: function() {
+        Mousetrap.bind('right', function() {
+            app.elSurfista.position.x += 5;
+        });
+        Mousetrap.bind('left', function() {
+            app.elSurfista.position.x -= 5;
+        });
+       
+        Mousetrap.bind('up', function() {
+            for (var i = 0; i <= 10; i++) {
+                   app.elSurfista.position.y -= 5;
+            };
+        });
+        Mousetrap.bind('down', function() {
+            for (var i = 0; i <= 10; i++) {
+                   app.elSurfista.position.y += 5;
+            };
         });
     }
 }
@@ -88,3 +103,4 @@ var controlesJogo = {
 app.inicializar();
 app.inserirStage();
 app.iniciarAnimacao();
+app.carregarInicioJogo();
