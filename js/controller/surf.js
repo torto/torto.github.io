@@ -1,90 +1,217 @@
-var app = {
-    inicializar: function() {
-        // cria a instancia pixi stage
-        this.stage = new PIXI.Stage(0xC6C6C6, true);
+var game = new Phaser.Game(900, 500, Phaser.CANVAS, 'center', {
+    preload: construtor,
+    create: construiu,
+    update: animacao
+});
 
-        //injetar todas as imagens para inserir uma unica vez
-        this.gameInjecao = new PIXI.DisplayObjectContainer();
-        this.gameInjecaoMar = new PIXI.DisplayObjectContainer();
+var app = {};
 
-        this.renderer = PIXI.autoDetectRenderer(900, 500);
-        document.getElementById('center').appendChild(this.renderer.view);
+function construtor() {
+    game.load.image('fundo', 'img/fundo.jpg');
+    game.load.image('surfista', 'img/surfista.png');
+    game.load.image('mar4', 'img/mar/4.png');
+    game.load.image('mar3', 'img/mar/3.png');
+    game.load.image('mar2', 'img/mar/2.png');
+    game.load.image('mar1', 'img/mar/1-test.png');
+    game.load.image('tubarao', 'img/tubarao1.png');
+}
 
-        this.carregarOndas();
-        this.carregarSurfista();
-        
-    },
-    carregarOndas: function() {
-        // MAR CONFIGURAÇAO
-        var ttMar = PIXI.Texture.fromImage("img/mar/1-test.png");
-        this.elMar = new PIXI.TilingSprite(ttMar, 1000, 71);
+function construiu() {
 
-        this.elMar.position.y = 429;
+    alert('Bem Vindo a versão beta beta da beta da beta');
+    alert('Ajustando ainda uma colisão mais refinada');
+    alert('Tubarão 2000');
 
-        var ttMar1 = PIXI.Texture.fromImage("img/mar/2.png");
-        this.elMar1 = new PIXI.TilingSprite(ttMar1, 1000, 124);
+    game.world.setBounds(-200, 0, 1700, 500);// seta tamanho da colisão da tela
 
-        this.elMar1.position.y = 376;
+    //adiciona as imagens na ela
+    adicionandoImagens();
 
-        var ttMar2 = PIXI.Texture.fromImage("img/mar/3.png");
-        this.elMar2 = new PIXI.TilingSprite(ttMar2, 1000, 146);
+    //setando tipo de fisica
+    game.physics.startSystem(Phaser.Physics.P2JS);
 
-        this.elMar2.position.y = 354;
+    //efeito pingar mais forte
+    game.physics.p2.restitution = 0.0;
 
-        var ttMar3 = PIXI.Texture.fromImage("img/mar/4.png");
-        this.elMar3 = new PIXI.TilingSprite(ttMar3, 1000, 170);
+    //surfista fisica adicionada
+    game.physics.p2.enable(app.surfista, false);
+    app.surfista.body.fixedRotation = true; //evita que gire loucamente
+    app.surfista.body.setRectangle(100, 120); //seta tamanho do body para toque
 
-        this.elMar3.position.y = 330;
+    //tubarao fisica adicionada
+    game.physics.p2.enable(app.tubarao, false);
+    game.physics.p2.enable(app.tubarao1, false);
+    game.physics.p2.enable(app.tubarao2, false);
+    setarValoresTubaroes(app.tubarao);
+    setarValoresTubaroes(app.tubarao1);
+    setarValoresTubaroes(app.tubarao2);
 
-        this.gameInjecaoMar.addChild(this.elMar3);
-        this.gameInjecaoMar.addChild(this.elMar2);
-        this.gameInjecaoMar.addChild(this.elMar1);
-        this.gameInjecaoMar.addChild(this.elMar); 
+    //eventos de colisão
+    app.surfista.body.createBodyCallback(app.tubarao, colidirTubarao, this);
+    app.surfista.body.createBodyCallback(app.tubarao1, colidirTubarao, this);
+    app.surfista.body.createBodyCallback(app.tubarao2, colidirTubarao, this);
 
-    },
-    carregarSurfista: function() {
-        //SURFISTA CONFIGURACAO
+    game.physics.p2.setImpactEvents(true);
 
-        var ttSurfista = PIXI.Texture.fromImage("img/surfista.png");
-        this.elSurfista = new PIXI.Sprite(ttSurfista);
+    //setando valor false para não exibir tubaroes
+    app.tubarao.exec = true;
+    app.tubarao1.exec = false;
+    app.tubarao2.exec = false;
 
-        this.elSurfista.position.x = 30;
-        this.elSurfista.position.y = 260;
+    app.cursor = game.input.keyboard.createCursorKeys();
 
-        this.gameInjecao.addChild(this.elSurfista);
-    },
-    inserirStage: function() {
-        //inserir imagens e elementos no stage
-        this.stage.addChild(this.gameInjecaoMar);
-        this.stage.addChild(this.gameInjecao);
-    },
-    iniciarAnimacao: function() {
-        //INICIAR ANIMACAO JOGO
-        requestAnimFrame(this.animate);
-    },
-    animate: function() {
-        //MAR ANIMACAO CONSTANTE
-        app.elMar.tilePosition.x += 1.5;
-        app.elMar1.tilePosition.x += 1;
-        app.elMar2.tilePosition.x += 1;
-        app.elMar3.tilePosition.x += 0.5;
-        //------------------------
-        app.renderer.render(app.stage);
-        requestAnimFrame(app.animate);
-    }, carregarInicioJogo: function(){
-        this.play = true;
-        controlesJogo.controleSurfista();
+    setInterval(function() {
+        if (!app.tubarao.exec) {
+            app.tubarao.exec = true;
+        } else if (!app.tubarao1.exec) {
+            app.tubarao1.exec = true;
+        } else {
+            app.tubarao2.exec = true;
+        }
+    }, gerarValoresRandomicos(2000, 5000));
+
+}
+
+function animacao() {
+    app.surfista.body.setZeroVelocity();
+
+    // console.log(app.tubarao.x);
+
+    execTubarao();
+    execSurfista();
+    execMar();
+    execControles();
+
+}
+
+function adicionandoImagens() {
+    //adicionando os mares - Parte 1
+    app.fundo = game.add.image(0,0, 'fundo');
+
+    app.mar4 = game.add.tileSprite(0, 331, 1000, 170, 'mar4');
+    app.mar3 = game.add.tileSprite(0, 355, 1000, 146, 'mar3');
+    app.mar2 = game.add.tileSprite(0, 377, 1000, 124, 'mar2');
+
+    //Adicionando Tubaroes
+    app.tubarao = game.add.sprite(1000, 450, 'tubarao');
+    app.tubarao1 = game.add.sprite(1000, 450, 'tubarao');
+    app.tubarao2 = game.add.sprite(1000, 450, 'tubarao');
+
+    //adicionando os mares - Parte 2
+    app.mar1 = game.add.tileSprite(0, 430, 1000, 71, 'mar1');
+
+    //adicionando o surfista
+    app.surfista = game.add.sprite(100, 380, 'surfista');
+}
+
+function colidirTubarao() {
+    alert('Enconstou, assim q app tiver pronto GAME OVER PUTANA!');
+}
+
+function setarValoresTubaroes(valor) {
+    valor.body.fixedRotation = true; //evita que vire loucamente
+    valor.body.setRectangle(150, 70); //seta tamanho do body para toque
+    valor.body.setZeroVelocity();
+    valor.body.y = 450;
+    valor.y = 450;
+    // valor.body.collideWorldBounds = false;
+}
+
+function execTubarao() {
+    if (app.tubarao.body) {
+        app.tubarao.body.setZeroVelocity();
+        app.tubarao.body.y = 450;
+        app.tubarao.y = 450;
+        if (app.tubarao.exec) {
+            app.tubarao.body.moveLeft(200);
+        }
+    }
+
+    if (app.tubarao1.body) {
+        app.tubarao1.body.setZeroVelocity();
+        app.tubarao1.body.y = 450;
+        app.tubarao1.y = 450;
+        if (app.tubarao1.exec) {
+            app.tubarao1.body.moveLeft(200);
+        }
+    }
+
+    if (app.tubarao2.body) {
+        app.tubarao2.body.setZeroVelocity();
+        app.tubarao2.body.y = 450;
+        app.tubarao2.y = 450;
+        if (app.tubarao2.exec) {
+            app.tubarao2.body.moveLeft(200);
+        }
+    }
+
+    if (parseInt(app.tubarao.x, 10) <= -105) {
+        app.tubarao.exec = false;
+        app.tubarao.body.x = 1050;
+    }
+
+    if (parseInt(app.tubarao1.x, 10) <= -105) {
+        app.tubarao1.exec = false;
+        app.tubarao1.body.x = 1050;
+    }
+
+    if (parseInt(app.tubarao2.x, 10) <= -105) {
+        app.tubarao2.exec = false;
+        app.tubarao2.body.x = 1050;
     }
 }
 
-var controlesJogo = {
-    controleSurfista: function(){
-        Mousetrap.bind('right', function(){
-            app.elSurfista.position.x += 1;
-        });
+function execMar() {
+    app.mar1.tilePosition.x += 1.5;
+    app.mar2.tilePosition.x += 1;
+    app.mar3.tilePosition.x += 1;
+    app.mar4.tilePosition.x += 0.5;
+}
+
+function execControles() {
+    if (app.cursor.left.isDown) {
+        app.surfista.body.moveLeft(300);
+    }
+
+    if (app.cursor.right.isDown) {
+        app.surfista.body.moveRight(300);
+    }
+
+    if (app.cursor.up.isDown) {
+        //app.up - verifica se chegou ao topo
+        //do pulo, torna true quando solta o dedo
+        if (app.surfista.body.y > 200 && app.up) {
+            app.surfista.body.moveUp(600);
+        } else {
+            app.up = false;
+            if (app.surfista.body.y < 380) {
+                app.surfista.body.moveDown(600);
+            } else {
+                app.surfista.body.y = 380; //seta lugar inicio
+            }
+        }
+    }
+
+    if (app.cursor.up.isUp) {
+        app.up = true;
+        if (app.surfista.body.y < 380) {
+            app.surfista.body.moveDown(600);
+        } else {
+            app.surfista.body.y = 380; //seta lugar inicio
+        }
     }
 }
 
-app.inicializar();
-app.inserirStage();
-app.iniciarAnimacao();
+function execSurfista() {
+    if(parseInt(app.surfista.body.x, 10) < 59){
+        app.surfista.body.x = 59;
+    }
+
+    if(parseInt(app.surfista.x,10) > 825){
+        app.surfista.body.x = 825;
+    }
+}
+
+function gerarValoresRandomicos(min, max) {
+    return Math.random() * (max - min) + min;
+}
