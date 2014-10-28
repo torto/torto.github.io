@@ -131,9 +131,9 @@ function execControles() {
     }
 
     if (app.cursor.left.isDown) {
-        game.camera.x -= 4;
+        game.camera.x -= 20;
     } else if (app.cursor.right.isDown) {
-        game.camera.x += 4;
+        game.camera.x += 20;
     }
 
 }
