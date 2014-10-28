@@ -70,7 +70,7 @@ function construiu() {
     app.exec = true; // evita que de para dar duplo espaço no executar
 
     //adiciona texto legenda
-    app.texto = game.add.text(30, 10, 'Alterar Força: 1/2 - Alterar Angulo: Up/Down - Lançar o Rafa - Espaço', {
+    app.texto = game.add.text(30, 10, 'Alterar Força: 1/2 - Alterar Angulo: Up/Down - Lançar o Rafa - Espaço - Direcionar camera - left/right', {
         font: "12px sans-serif",
         fill: "#ffffff",
         align: "center"
