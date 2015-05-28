@@ -1,0 +1,17 @@
+# Site settings
+title: Torto Blog
+header-img: img/home-bg.jpg
+email: tortoyoyo@gmail.com
+description: "Blog lindo do torto!"
+baseurl: ""
+url: "http://tortoyoyo.github.io/"
+twitter_username: tortoyo
+github_username:  tortoyoyo
+facebook_username:  tortoyo
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
