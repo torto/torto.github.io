@@ -1,10 +1,10 @@
 # Site settings
 title: Torto Blog
-header-img: img/home-bg.jpg
+header-img: img/home.jpg
 email: tortoyoyo@gmail.com
 description: "Blog lindo do torto!"
 baseurl: ""
-url: "http://tortoyoyo.github.io/"
+url: ""
 twitter_username: tortoyo
 github_username:  tortoyoyo
 facebook_username:  tortoyo
