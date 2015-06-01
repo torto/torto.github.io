@@ -5,13 +5,13 @@
     <description>Blog lindo do torto!</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 01 Jun 2015 00:04:13 -0300</pubDate>
-    <lastBuildDate>Mon, 01 Jun 2015 00:04:13 -0300</lastBuildDate>
+    <pubDate>Mon, 01 Jun 2015 00:12:52 -0300</pubDate>
+    <lastBuildDate>Mon, 01 Jun 2015 00:12:52 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Node.js no Google I/O - Francisco Beltrão</title>
-        <description>&lt;p&gt;Nessa última sexta-feira (29/05/2015) aconteceu um evento do Google, chamado Google I/O, onde deu liberdade a cada Google Developer Groups (GDG) organizar seu próprio evento, mesmo deixando claro toda minha militância ao software livre, privacidade e a comunidade Mozilla, fui convidado pelo amigo &lt;b&gt;Mitrut&lt;/b&gt; o qual estava organizando o evento, a palestrar sobre Node.js e na hora aceitei.&lt;/p&gt;
+        <title>Node.js no Google I/O Extended - Francisco Beltrão</title>
+        <description>&lt;p&gt;Nessa última sexta-feira (29/05/2015) aconteceu um evento do Google, chamado Google I/O Extended, onde deu liberdade a cada Google Developer Groups (GDG) organizar seu próprio evento, mesmo deixando claro toda minha militância ao software livre, privacidade e a comunidade Mozilla, fui convidado pelo amigo &lt;b&gt;Mitrut&lt;/b&gt; o qual estava organizando o evento, a palestrar sobre Node.js e na hora aceitei.&lt;/p&gt;
 
 &lt;p&gt;O evento teve a presença de quase 300 pessoas, que para região foi um evento de muito sucesso e a palestra foi rápida mas bem divertida :D &lt;/p&gt;
 
