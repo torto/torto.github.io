@@ -5,9 +5,69 @@
     <description>Blog lindo do torto!</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 01 Jun 2015 03:11:10 -0300</pubDate>
-    <lastBuildDate>Mon, 01 Jun 2015 03:11:10 -0300</lastBuildDate>
+    <pubDate>Thu, 10 Sep 2015 17:56:04 -0300</pubDate>
+    <lastBuildDate>Thu, 10 Sep 2015 17:56:04 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>HackDay do Grupo Hacker PatoLivre</title>
+        <description>&lt;p&gt;Nesse último fim de semana (05/09/2015) aconteceu o Primeiro HackDay do grupo PatoLivre da cidade de Pato Branco - PR, grupo esse que nasceu da necessidade do Dyego Cantu (Um dos participantes) em reunir o pessoal que tinha interesse por Software Livre e na cultura hacker, mas a comunidade ficou por alguns anos sem nunca terem feito um encontro, é nesse contexto que começo meu texto.&lt;/p&gt;
+
+&lt;p&gt;Eis que com minha entrada na comunidade da Mozilla fez eu conhecer alguns projetos muito legais, um deles é o Firefox Student Ambassador, projeto que incentiva as pessoas a criarem grupos de estudos dentro da universidade, além desse projeto existe o Firefox Club, que tem como princípio criar um grupo hacker para trabalhar com as tecnologias da Mozilla, algo muito parecido com GDG do Google. Mas meu interesse era poder criar um grupo hacker bem abrangente e não somente algo focado na tecnologia de uma única empresa.&lt;/p&gt;
+
+&lt;p&gt;Um dos meus professores, muito querido por sinal (Edison Pontarolo), viu meu interesse com o software livre e comentou da existência do PatoLivre, foi ai que entrei na a lista de e-mail e convidei as pessoas do grupo para nós reunirmos e conversarmos e assim botar o grupo em funcionamento. Foi ai então que aconteceu em um sábado de manhã meu primeiro contato com as pessoas do grupo.&lt;/p&gt;
+
+&lt;p&gt;Nesse dia foi minha pessoa, meu sócio, que na época morava comigo Ivo o Landa, Gean e o Dyego que faziam parte dessa lista, foi ai que “propostiei” de nós nos encontrarmos uma vez por mês para que pudéssemos ativar o grupo e fazer coisas legais.&lt;/p&gt;
+
+&lt;p&gt;Dyego com toda sua sabedoria por muitas vezes nesse dia fez questão de deixar claro que não tinha dinheiro envolvido e que não existia um ambiente físico para que o grupo pudesse funcionar, confesso que fiquei meio preocupado um pouco com essa conversa, fiquei tentando encontrar onde na minha fala eu tinha demonstrado meu interesse em ganhar grana com isso.&lt;/p&gt;
+
+&lt;p&gt;Hoje depois de um ano e alguns meses eu entendo a preocupação dele naquele dia, preocupação essa de querer manter o ambiente puro na sua essência, sem a interferência de empresas ditando o que vamos ou não fazer, ou até mesmo interesses de membros do grupo em lucrar a custas do grupo.&lt;/p&gt;
+
+&lt;p&gt;Depois de alguns encontros e alguns novos membros decidimos fazer um trabalho em conjunto com todos, eis que surge a ideia de um pato robô, que foi chamado de Patobot e assim após de pronto queríamos mostrar para comunidade e foi decido em criar um dia de evento para que todos apreciassem nossa comunidade &amp;lt;3.&lt;/p&gt;
+
+&lt;p&gt;O evento aconteceu no sábado o dia inteiro, pela manhã tivemos dois momentos, um onde demonstramos tecnicamente o nosso robô e no momento seguinte um bate papo com as pessoas sobre temas variados, entre eles: Software Livre, Cultura Hacker, Recursos Educacionais Abertos, Código Aberto e Machismo na Tecnologia.&lt;/p&gt;
+
+&lt;p&gt;Pela tarde tivemos vários workshops acontecendo simultaneamente, segue o link do evento para conferirem o que teve (&lt;a href=&quot;http://patolivre.tk/hackday/&quot; target=&quot;_blank&quot;&gt;click aqui&lt;/a&gt;, voltando aos anos 90), e como um amante de tecnologias livres e abertas, falei do meu tema preferido, Apache Cordova para diversas plataformas e utilizei com o pessoal o Firefox OS para testarmos os nossos exemplos.&lt;/p&gt;
+
+&lt;p&gt;Gostaria novamente de agradecer a todos os membros do grupo, foi um puta evento e o melhor foi com a nossa cara e jeito, que venham mais eventos como esse, um abraço a todos, segue abaixo umas fotinhas tiradas pela namorada mais linda do mundo, no caso a minha.&lt;/p&gt;
+
+&lt;div id=&quot;gallery&quot;&gt;
+    &lt;a href=&quot;/img/1hackday/1.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/1.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/2.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/2.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/3.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/3.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/4.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/4.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/5.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/5.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/6.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/6.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/7.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/7.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/8.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/8.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/9.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/9.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/10.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/10.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/11.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/11.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/12.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/12.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/13.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/13.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/14.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/14.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/15.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/15.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/16.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/16.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/17.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/17.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/18.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/18.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/19.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/19.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/20.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/20.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/img/1hackday/21.jpg&quot;&gt;&lt;img src=&quot;/img/1hackday/21.jpg&quot; alt=&quot;Photo 1&quot; /&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$( function() {
+    $( &#39;#gallery&#39; ).jGallery();
+} );
+&lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 10 Sep 2015 09:00:00 -0300</pubDate>
+        <link>/2015/09/10/hack-day/</link>
+        <guid isPermaLink="true">/2015/09/10/hack-day/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Node.js no Google I/O Extended - Francisco Beltrão</title>

@@ -1,0 +1,58 @@
+---
+layout:     post
+title:      "HackDay do Grupo Hacker PatoLivre"
+subtitle:   "Evento da cultara hacker patobranquense"
+date:       2015-09-10 12:00:00
+author:     "Torto"
+header-img: "img/1hackday.jpg"
+---
+
+<p>Nesse último fim de semana (05/09/2015) aconteceu o Primeiro HackDay do grupo PatoLivre da cidade de Pato Branco - PR, grupo esse que nasceu da necessidade do Dyego Cantu (Um dos participantes) em reunir o pessoal que tinha interesse por Software Livre e na cultura hacker, mas a comunidade ficou por alguns anos sem nunca terem feito um encontro, é nesse contexto que começo meu texto.</p>
+
+<p>Eis que com minha entrada na comunidade da Mozilla fez eu conhecer alguns projetos muito legais, um deles é o Firefox Student Ambassador, projeto que incentiva as pessoas a criarem grupos de estudos dentro da universidade, além desse projeto existe o Firefox Club, que tem como princípio criar um grupo hacker para trabalhar com as tecnologias da Mozilla, algo muito parecido com GDG do Google. Mas meu interesse era poder criar um grupo hacker bem abrangente e não somente algo focado na tecnologia de uma única empresa.</p>
+
+<p>Um dos meus professores, muito querido por sinal (Edison Pontarolo), viu meu interesse com o software livre e comentou da existência do PatoLivre, foi ai que entrei na a lista de e-mail e convidei as pessoas do grupo para nós reunirmos e conversarmos e assim botar o grupo em funcionamento. Foi ai então que aconteceu em um sábado de manhã meu primeiro contato com as pessoas do grupo.</p>
+
+<p>Nesse dia foi minha pessoa, meu sócio, que na época morava comigo Ivo o Landa, Gean e o Dyego que faziam parte dessa lista, foi ai que “propostiei” de nós nos encontrarmos uma vez por mês para que pudéssemos ativar o grupo e fazer coisas legais.</p>
+
+<p>Dyego com toda sua sabedoria por muitas vezes nesse dia fez questão de deixar claro que não tinha dinheiro envolvido e que não existia um ambiente físico para que o grupo pudesse funcionar, confesso que fiquei meio preocupado um pouco com essa conversa, fiquei tentando encontrar onde na minha fala eu tinha demonstrado meu interesse em ganhar grana com isso.</p>
+
+<p>Hoje depois de um ano e alguns meses eu entendo a preocupação dele naquele dia, preocupação essa de querer manter o ambiente puro na sua essência, sem a interferência de empresas ditando o que vamos ou não fazer, ou até mesmo interesses de membros do grupo em lucrar a custas do grupo.</p>
+
+<p>Depois de alguns encontros e alguns novos membros decidimos fazer um trabalho em conjunto com todos, eis que surge a ideia de um pato robô, que foi chamado de Patobot e assim após de pronto queríamos mostrar para comunidade e foi decido em criar um dia de evento para que todos apreciassem nossa comunidade <3.</p>
+
+<p>O evento aconteceu no sábado o dia inteiro, pela manhã tivemos dois momentos, um onde demonstramos tecnicamente o nosso robô e no momento seguinte um bate papo com as pessoas sobre temas variados, entre eles: Software Livre, Cultura Hacker, Recursos Educacionais Abertos, Código Aberto e Machismo na Tecnologia.</p>
+
+<p>Pela tarde tivemos vários workshops acontecendo simultaneamente, segue o link do evento para conferirem o que teve (<a href="http://patolivre.tk/hackday/" target="_blank">click aqui</a>, voltando aos anos 90), e como um amante de tecnologias livres e abertas, falei do meu tema preferido, Apache Cordova para diversas plataformas e utilizei com o pessoal o Firefox OS para testarmos os nossos exemplos.</p>
+
+<p>Gostaria novamente de agradecer a todos os membros do grupo, foi um puta evento e o melhor foi com a nossa cara e jeito, que venham mais eventos como esse, um abraço a todos, segue abaixo umas fotinhas tiradas pela namorada mais linda do mundo, no caso a minha.</p>
+
+<div id="gallery">
+    <a href="/img/1hackday/1.jpg"><img src="/img/1hackday/1.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/2.jpg"><img src="/img/1hackday/2.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/3.jpg"><img src="/img/1hackday/3.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/4.jpg"><img src="/img/1hackday/4.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/5.jpg"><img src="/img/1hackday/5.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/6.jpg"><img src="/img/1hackday/6.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/7.jpg"><img src="/img/1hackday/7.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/8.jpg"><img src="/img/1hackday/8.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/9.jpg"><img src="/img/1hackday/9.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/10.jpg"><img src="/img/1hackday/10.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/11.jpg"><img src="/img/1hackday/11.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/12.jpg"><img src="/img/1hackday/12.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/13.jpg"><img src="/img/1hackday/13.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/14.jpg"><img src="/img/1hackday/14.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/15.jpg"><img src="/img/1hackday/15.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/16.jpg"><img src="/img/1hackday/16.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/17.jpg"><img src="/img/1hackday/17.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/18.jpg"><img src="/img/1hackday/18.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/19.jpg"><img src="/img/1hackday/19.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/20.jpg"><img src="/img/1hackday/20.jpg" alt="Photo 1" /></a>
+    <a href="/img/1hackday/21.jpg"><img src="/img/1hackday/21.jpg" alt="Photo 1" /></a>
+
+</div>
+<script type="text/javascript">
+$( function() {
+    $( '#gallery' ).jGallery();
+} );
+</script>
