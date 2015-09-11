@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "HackDay do Grupo Hacker PatoLivre"
-subtitle:   "Evento da cultara hacker patobranquense"
+subtitle:   "Evento da cultura hacker patobranquense"
 date:       2015-09-10 12:00:00
 author:     "Torto"
 header-img: "img/1hackday.jpg"
