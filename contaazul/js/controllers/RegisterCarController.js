@@ -6,7 +6,7 @@ angular.module('conta-azul').controller('RegisterCarController', ['$scope', 'Lis
     $scope.car.combustivel = 'Gasolina';
     $scope.imagem = null;
 
-    if (carAlter) {
+    if (carAlter.placa) {
       $scope.car = carAlter;
     }
 
@@ -14,10 +14,11 @@ angular.module('conta-azul').controller('RegisterCarController', ['$scope', 'Lis
     Salva o Carro
     */
     $scope.saveCar = function() {
-      if (carAlter) {
+      if (carAlter.placa) {
         ListCarService.removeCar(carAlter).then(function() {
           ListCarService.addCar($scope.car).then(function(car) {
             $scope.car = {};
+            $scope.cleanAlter();
             $location.path('/');
           });
         });
