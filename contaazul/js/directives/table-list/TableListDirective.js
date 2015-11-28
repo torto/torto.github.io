@@ -16,9 +16,13 @@ angular.module('conta-azul').directive('tableList', [function() {
         scope.pagination = false;
       }
 
-      $(elem).on('click', 'input[type="checkbox"]', function(e) {
-          $(this).closest('tr:not(:has(th))').toggleClass('table-select');
+      $(elem).on('change', 'input[type="checkbox"]', function(e) {
+        $(this).closest('tr:not(:has(th))').toggleClass('table-select');
         e.preventDefault();
+      });
+      scope.options.fullSelect =false;
+      scope.$watch('options.fullSelect', function(newValue) {
+        $('.checkbox-full').change();
       });
 
       $('.checkbox-full').on('change', function(e) {
@@ -64,6 +68,28 @@ angular.module('conta-azul').directive('tableList', [function() {
 
         } else {
           $scope.options.itemSelect.splice(index, 1);
+        }
+      };
+      $scope.setFullObject = function(list) {
+        var valueInit = $scope.options.currentPage*$scope.options.pageSize;
+        if ($scope.options.pageSize > $scope.options.list.length) {
+          if ($scope.options.itemSelect.length < $scope.options.list.length) {
+
+            for (var i = valueInit; i < list.length; i++) {
+              $scope.options.itemSelect.push(list[i]);
+            }
+
+          } else {
+            $scope.options.itemSelect = [];
+          }
+        } else {
+          if ($scope.options.itemSelect.length < $scope.options.pageSize) {
+            for (var j = valueInit; j < valueInit + $scope.options.pageSize; j++) {
+              $scope.options.itemSelect.push(list[j]);
+            }
+          } else {
+            $scope.options.itemSelect = [];
+          }
         }
       };
       $scope.changePageTableDirective = function(position) {

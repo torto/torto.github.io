@@ -1,19 +1,19 @@
 <div class="panel panel-default table-default">
 
-  <table class="table table-hover table-bordered">
+  <table ng-init="options.filtered = options.list" class="table table-hover table-bordered">
     <tr>
       <th class="">
-        		<input type="checkbox" id="checkbox-1-1" class="regular-checkbox checkbox-full" /><label for="checkbox-1-1"></label>
+        		<input type="checkbox" ng-init="options.fullSelect = false" id="checkbox-1-1" ng-model="options.fullSelect" ng-click="setFullObject(options.filtered)" class="regular-checkbox checkbox-full" /><label for="checkbox-1-1"></label>
       </th>
       <th class="{{labels.size}}" ng-repeat="labels in options.labels">
         {{labels.label}}
       </th>
     </tr>
-    <tr ng-init="options.filtered = options.list" ng-click="onClickItem()(car)" ng-repeat="car in options.filtered | startFrom:options.currentPage*5 | limitTo:options.pageSize" >
+    <tr   ng-repeat="car in options.filtered | startFrom:options.currentPage*5 | limitTo:options.pageSize" >
       <td>
         <input type="checkbox" id="conteudo-{{$index}}" ng-click="selectItemTableDirective(car)" class="regular-checkbox" /><label for="conteudo-{{$index}}"></label>
       </td>
-      <td ng-class="{'text-right padding-table' : (options.labels.length - 1) == $index}" ng-repeat="labels in options.labels">
+      <td ng-click="onClickItem()(car)" ng-class="{'text-right padding-table' : (options.labels.length - 1) == $index}" ng-repeat="labels in options.labels">
         <p  ng-if="labels.value !== 'imagem' && labels.value !== 'valor'">{{car[labels.value]}}</p>
         <p  ng-if="labels.value !== 'imagem' && car[labels.value] == null && car[labels.value] == undefined">Sem Valor</p>
 

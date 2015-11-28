@@ -26,13 +26,15 @@ angular.module('conta-azul').controller('IndexController', ['$scope', 'ListCarSe
       var remove = [];
       for (var i = 0; i < $scope.listCar.itemSelect.length; i++) {
         var method = ListCarService.removeCar($scope.listCar.itemSelect[i]).then(function(value) {
+          console.log('removeu' +i);
         });
         remove.push(method);
       }
       var update = ListCarService.getAllListCar().then(function(values) {
         $scope.listCar.list = values;
         $scope.listCar.itemSelect = [];
-        // $scope.$apply();
+        $scope.listCar.fullSelect = false;
+        updateList();
       });
       remove.push(update);
       $q.all(remove);
@@ -43,12 +45,16 @@ angular.module('conta-azul').controller('IndexController', ['$scope', 'ListCarSe
     Executa a ação de filtro
     */
     $scope.$watch('listCar.search', function(newVal, oldVal) {
+      updateList();
 
+    }, true);
+
+    function updateList() {
       var newArray = $scope.listCar.list.filter($scope.filterCars);
       $scope.listCar.filtered = newArray;
       $scope.listCar.totalPages = Math.ceil($scope.listCar.filtered.length / $scope.listCar.pageSize);
       $scope.listCar.currentPage = 0;
-    }, true);
+    }
 
     $scope.filterCars = function(item) {
       if (angular.lowercase(item.marca).indexOf(angular.lowercase($scope.listCar.search.marca)) !== -1 || angular.lowercase(item.modelo).indexOf(angular.lowercase($scope.listCar.search.modelo)) !== -1) {
