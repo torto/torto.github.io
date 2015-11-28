@@ -1,0 +1,54 @@
+<div class="main-index">
+
+  <header-fixed></header-fixed>
+
+  <div class="container" id="content">
+
+    <div class="form-inline" style="margin-top: 19px;">
+      <a class="btn btn-green" href="#/register/car">Novo Carro</a>
+      <a class="btn btn-grey" data-target="#modalRemove" data-toggle="modal" href="">Excluir</a>
+
+      <div class="input-group pull-right search-input">
+        <input class="form-control" ng-change="listCar.search.modelo=listCar.search.marca" ng-model="listCar.search.marca" placeholder="Pesquisar" type="text">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <table-list on-change-page="setListPosition" on-click-item="changeCarPage" on-remove-item="removeCar" options="listCar" pagination="true"></table-list>
+
+    <!-- Modal -->
+    <div aria-labelledby="myModalLabel" class="modal fade text-blue" id="modalRemove" role="dialog" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Excluir Carros</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-8 col-md-offside-2">
+                Deseja excluir todos os carros selecionados?
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-md-2">
+                <button class="btn btn-grey " data-dismiss="modal" type="button">Não</button>
+              </div>
+              <div class="col-md-5 col-md-offset-4 pull-right">
+                <button class="btn btn-green btn-block" ng-click="removeCar()" data-dismiss="modal" type="button">Sim</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
