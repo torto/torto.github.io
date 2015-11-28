@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('conta-azul', ['ngRoute']).config(['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider) {
-$locationProvider.html5Mode(true);
+$locationProvider.html5Mode(true).hashPrefix('!');
     $routeProvider.when('/', {
       templateUrl: 'partials/index.html',
       controller: 'IndexController'
@@ -19,7 +19,7 @@ $locationProvider.html5Mode(true);
     });
 
     $routeProvider.otherwise({
-      redirectTo: '/index'
+      redirectTo: '/'
     });
 
   }]);

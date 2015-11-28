@@ -31,7 +31,7 @@ angular.module('conta-azul').controller('RegisterCarController', ['$scope', 'Lis
     };
 
     $scope.cleanAlter = function () {
-      ListCarService.setCarChange(null);
+      ListCarService.setCarChange({});
     };
 
   }
