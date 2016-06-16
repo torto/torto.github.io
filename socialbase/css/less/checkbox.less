@@ -1,0 +1,66 @@
+label {
+	display: inline;
+}
+
+.regular-checkbox {
+	display: none;
+}
+
+.regular-checkbox + label {
+	background-color: @color-white;
+	border: 1px solid @color-grey;
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+  margin: 0px;
+	cursor: pointer;
+  vertical-align: middle;
+}
+
+
+.regular-checkbox:checked + label {
+	background-color: @color-white;
+	border: 1px solid @color-blue;
+	color: #99a1a7;
+	cursor: pointer;
+}
+
+.regular-checkbox:checked + label:after {
+	content: "\e013";
+  font-family: 'Glyphicons Halflings';
+	font-size: 12px;
+	position: absolute;
+	top: 0px;
+	left: 2px;
+	color: @color-blue;
+}
+
+
+.big-checkbox + label {
+	padding: 18px;
+}
+
+.big-checkbox:checked + label:after {
+	font-size: 28px;
+	left: 6px;
+}
+
+.tag {
+	font-family: Arial, sans-serif;
+	width: 200px;
+	position: relative;
+	top: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	float: left;
+}
+
+.radio-1 {
+	width: 193px;
+}
+
+.button-holder {
+	float: left;
+}

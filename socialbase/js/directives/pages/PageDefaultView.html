@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-2">
+
+    <div class="todo-list">
+      <div class="page-left-deco-blue"></div>
+      <header class="vertical-offset-1">
+        <img src="img/todo.svg" alt=""/>
+        {{title}}
+      </header>
+      <div class="col-xs-12">
+        <div class="line-bottom-title"></div>
+      </div>
+      <ul class="todo-ul col-xs-12" ng-if="isList">
+        <ng-transclude></ng-transclude>
+      </ul>
+      <div ng-if="!isList">
+        <ng-transclude></ng-transclude>
+      </div>
+
+    </div>
+  </div>
+</div>
