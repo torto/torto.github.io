@@ -1,14 +1,33 @@
-<li ng-repeat="elem in listItem">
+<li ng-repeat="elem in listItem" ng-init="arrayShow = []; arrayEdit= [];">
+<div class="col-xs-12 no-padding" ng-init="arrayEdit[$index] = false" ng-show="!arrayEdit[$index]">
   <div class="todo-description col-xs-10">
-    <input type="checkbox" id="conteudo-{{$index}}" class="regular-checkbox" />
+    <input type="checkbox" id="conteudo-{{$index}}" class="regular-checkbox" ng-model="elem.isChecked" />
     <label for="conteudo-{{$index}}"></label>
 
-    <span class="text"> Testar algo em alguma maquina</span>
+    <span ng-class="{'check': elem.isChecked}" class="text"> {{elem.description}}</span>
 
   </div>
-<div class="todo-actions col-xs-2">
-  <a href="#"><img src="img/del.svg" alt="" /></a>
-  <a href="#"><img src="img/edit.svg" alt="" /></a>
+  <div class="todo-actions col-xs-2">
+    <a href="" ng-init="arrayShow[$index] = false" ng-click="arrayShow[$index] = true"><img src="img/del.svg" alt="" /></a>
+    <a href=""  ng-click="arrayEdit[$index] = true" class="onEdit"><img src="img/edit.svg" alt="" /></a>
+  </div>
+</div>
+<div class="col-xs-12 no-padding todo-edit" ng-show="arrayEdit[$index]">
+  <div class="col-xs-10">
+  <input type="text" name="editDescription" ng-model="elem.description" laceholder="Insira uma nova tarefa.">
+  </div>
+  <div class="col-xs-2 text-center">
+    <a href="" ng-click="arrayEdit[$index] = false"><img src="img/add.svg" alt="" /></a>
+  </div>
 </div>
 
+<confirm-dialog
+  message="'Deseja realmente excluir essa tarefa?'"
+  label-ok="'Excluir'"
+  label-cancel="'Cancelar'"
+  on-success="removeItem({elem: elem, index: $index})"
+  on-cancel="cancelItem({elem: elem, index: $index})"
+  index="$index"
+  model="elem"
+  show="arrayShow[$index]"></confirm-dialog>
 </li>

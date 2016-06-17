@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('socialbase', ['ngRoute']).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  angular.module('socialbase', ['ngRoute', 'ngStorage']).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider.when('/', {
       templateUrl: 'partials/index.html',

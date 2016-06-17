@@ -6,12 +6,11 @@
     return {
       restrict: 'E',
       scope: {
-        listItem: '=list'
+        listItem: '=list',
+        removeItem : '&',
+        cancelRemoveItem: '&'
       },
-      templateUrl: 'js/directives/todo/item/TodoListItemView.html',
-      link: function(scope, params, algo) {
-        
-      }
+      templateUrl: 'js/directives/todo/item/TodoListItemView.html'
     };
   }
 }());

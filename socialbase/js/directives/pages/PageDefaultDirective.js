@@ -10,10 +10,7 @@
         title: '@',
         isList: '=list'
       },
-      templateUrl: 'js/directives/pages/PageDefaultView.html',
-      link: function(scope, params, algo) {
-
-      }
+      templateUrl: 'js/directives/pages/PageDefaultView.html'
     };
   }
 }());

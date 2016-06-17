@@ -1,0 +1,9 @@
+<li class="todo-new-item">
+  <div class="col-xs-10">
+  <input type="text" name="addItem" ng-model="newItem" ng-keyup="addItemEnter($event)" placeholder="Insira uma nova tarefa.">
+  </div>
+  <div class="col-xs-2 text-center">
+    <a href="" ng-click="addItem({item: newItem}); cleanValues()"><img src="img/add.svg" alt="" /></a>
+  </div>
+
+</li>

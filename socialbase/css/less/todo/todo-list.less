@@ -25,6 +25,7 @@
       border-bottom: 1px solid fade(@color-grey, 50%);
       display: flex;
       padding: 15px 3px;
+      max-height: 53px;
       .todo-description {
         & .text {
           font-weight: 700;
@@ -44,6 +45,27 @@
           margin: 4px;
         }
       }
+
+      &.todo-new-item {
+        height: 53px;
+        padding: 10px 3px;
+        input {
+          width: 100%;
+          height: 100%;
+        }
+        img{
+          padding-top: 3px;
+        }
+      }
+
+      & .todo-edit{
+        input{
+          width: 100%;
+          height: 32px;
+          margin-top: -5px;
+        }
+      }
+
     }
   }
 }
