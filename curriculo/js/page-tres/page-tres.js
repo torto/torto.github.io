@@ -5,6 +5,7 @@ if (!app) {
 app.pageTres = (function($) {
 
     function init() {
+      app.loadImagens('tres', '.page-tres');
       visibleMenino();
       setTimeout(visibleMedio, 2000);
       setTimeout(visibleVeio, 4000);

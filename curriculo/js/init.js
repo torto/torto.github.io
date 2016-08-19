@@ -6,20 +6,21 @@ var app = {};
     function init() {
         initVariables();
         reloadButtons();
-
+        preloadImages(imagens);
         $('.change-second').click(function() {
-            changePage('second-page.html');
+            // changePage('second-page.html');
             // changePage('page-tres.html');
             // changePage('page-quatro.html');
             // changePage('page-cinco.html');
             // changePage('page-seis.html');
             // changePage('page-sete.html');
-            // changePage('page-oito.html');
+            changePage('page-oito.html');
             // changePage('page-nove.html');
         });
     }
 
     function initVariables() {
+        app.images={};
         body = $('body');
     }
 
@@ -77,7 +78,31 @@ var app = {};
         });
     }
 
+    function preloadImages(array){
+      // {elem, url, alt, class}
+      var i = 0;
+      for (i; i < array.length; i++) {
+        if(!app.images[array[i].elem]){
+          app.images[array[i].elem] = {};
+        }
+        app.images[array[i].elem][array[i].alt] = new Image();
+        app.images[array[i].elem][array[i].alt].src = array[i].url;
+        app.images[array[i].elem][array[i].alt].className  = array[i].class;
+        app.images[array[i].elem][array[i].alt].alt  = array[i].alt;
+      }
+    }
+
+    function loadImagens(elem, classInject) {
+        for (var i = 0; i < imagens.length; i++) {
+            if (imagens[i].elem === elem) {
+                document.querySelector(classInject)
+                .appendChild(app.images[imagens[i].elem][imagens[i].alt]);
+            } 
+        }
+    }
+
     app.changePage = changePage;
+    app.loadImagens = loadImagens;
 
     init();
 })(jQuery);
