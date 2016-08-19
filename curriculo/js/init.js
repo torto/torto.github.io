@@ -8,13 +8,13 @@ var app = {};
         reloadButtons();
         preloadImages(imagens);
         $('.change-second').click(function() {
-             changePage('second-page.html');
+            // changePage('second-page.html');
             // changePage('page-tres.html');
             // changePage('page-quatro.html');
             // changePage('page-cinco.html');
             // changePage('page-seis.html');
             // changePage('page-sete.html');
-            // changePage('page-oito.html');
+            changePage('page-oito.html');
             // changePage('page-nove.html');
         });
     }
@@ -97,7 +97,7 @@ var app = {};
             if (imagens[i].elem === elem) {
                 document.querySelector(classInject)
                 .appendChild(app.images[imagens[i].elem][imagens[i].alt]);
-            } 
+            }
         }
     }
 

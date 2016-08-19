@@ -4,43 +4,37 @@
         // {elem, url, alt, classs}
         {
             elem: 'dois',
-            url: "img/page-dois/nuvem.gif",
-            alt: "nuvem",
-            class: "cloud"
+            url: "img/page-dois/fundo.jpg",
+            alt: "fundo",
+            class: "elements"
         },
 				{
             elem: 'dois',
-            url: "img/page-dois/grama.gif",
-            alt: "grama",
-            class: "montains"
-        },
-				{
-            elem: 'dois',
-            url: "img/page-dois/cavalo.gif",
+            url: "img/page-dois/cavalo.png",
             alt: "cavalo",
             class: "me-horse"
         },
 				{
             elem: 'dois',
-            url: "img/page-dois/omundo.gif",
+            url: "img/page-dois/omundo.png",
             alt: "o mundo",
             class: "text o-mundo"
         },
 				{
             elem: 'dois',
-            url: "img/page-dois/encantado.gif",
+            url: "img/page-dois/encantado.png",
             alt: "encantado",
             class: "text encantado"
         },
 				{
             elem: 'dois',
-            url: "img/page-dois/de.gif",
+            url: "img/page-dois/de.png",
             alt: "de",
             class: "text de"
         },
 				{
             elem: 'dois',
-            url: "img/page-dois/tortolandia.gif",
+            url: "img/page-dois/tortolandia.png",
             alt: "tortolandia",
             class: "text tortolandia"
         },
@@ -50,6 +44,12 @@
             alt: "quarto",
             class: "elements"
         },
+        {
+						elem: 'tres',
+						url: "img/page-tres/menino.png",
+						alt: "menino",
+						class: "elements animation menino"
+				},
 				{
 						elem: 'tres',
 						url: "img/page-tres/videogame.png",
@@ -64,14 +64,8 @@
 				},
 				{
 						elem: 'quatro',
-						url: "img/page-quatro/chao.png",
-						alt: "chapeu",
-						class: "elements"
-				},
-				{
-						elem: 'quatro',
-						url: "img/page-quatro/nuvem.png",
-						alt: "nuvem",
+						url: "img/page-quatro/fundo.jpg",
+						alt: "fundo",
 						class: "elements"
 				},
 				{
