@@ -8,13 +8,13 @@ var app = {};
         reloadButtons();
         preloadImages(imagens);
         $('.change-second').click(function() {
-            // changePage('second-page.html');
+             changePage('second-page.html');
             // changePage('page-tres.html');
             // changePage('page-quatro.html');
             // changePage('page-cinco.html');
             // changePage('page-seis.html');
             // changePage('page-sete.html');
-            changePage('page-oito.html');
+            // changePage('page-oito.html');
             // changePage('page-nove.html');
         });
     }
