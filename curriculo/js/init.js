@@ -4,13 +4,18 @@ var app = {};
     var body, bLazy;
 
     function init() {
-        initLazyLoadImage();
         initVariables();
         reloadButtons();
 
         $('.change-second').click(function() {
             changePage('second-page.html');
             // changePage('page-tres.html');
+            // changePage('page-quatro.html');
+            // changePage('page-cinco.html');
+            // changePage('page-seis.html');
+            // changePage('page-sete.html');
+            // changePage('page-oito.html');
+            // changePage('page-nove.html');
         });
     }
 
@@ -18,30 +23,34 @@ var app = {};
         body = $('body');
     }
 
-    function initLazyLoadImage(){
-      bLazy = new Blazy({
-        selector: 'img',
-        success: function(ele){
-            console.log(ele);
-            app.audio.checkPauseOrPlay();
-        }
-      });
-      app.getLazyImg = bLazy;
-    }
-    function reloadImg(){
-      bLazy.revalidate();
-    }
-
     function reloadButtons(page) {
-      if(app.audio){
-        app.audio.pauseAudio();
-      }
+      // if(app.audio){
+      //   app.audio.pauseAudio();
+      // }
         switch (page) {
             case 'second-page.html':
-                setTimeout(app.secondPage.init(),0);
+                app.secondPage.init();
             break;
             case 'page-tres.html':
-                setTimeout(app.pageTres.init(),0);
+                app.pageTres.init();
+            break;
+            case 'page-quatro.html':
+                app.pageQuatro.init();
+            break;
+            case 'page-cinco.html':
+                app.pageCinco.init();
+            break;
+            case 'page-seis.html':
+                app.pageSeis.init();
+            break;
+            case 'page-sete.html':
+                app.pageSete.init();
+            break;
+            case 'page-oito.html':
+                app.pageOito.init();
+            break;
+            case 'page-nove.html':
+                app.pageNove.init();
             break;
             default:
         }
@@ -69,7 +78,6 @@ var app = {};
     }
 
     app.changePage = changePage;
-    app.reloadImg = reloadImg;
 
     init();
 })(jQuery);

@@ -26,7 +26,7 @@ app.secondPage = (function($){
                 width: "easeOutBounce"
             },
             complete: function() {
-                // setTimeout(app.changePage('page-tres.html'), 3000);
+                setTimeout(function(){app.changePage('page-tres.html');}, 3000);
             }
         });
       }, 4000);

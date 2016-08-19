@@ -25,7 +25,7 @@ app.audio = (function($) {
     function checkPause(value){
       switch (value) {
         case 1:
-          playAudio();
+          // playAudio();
           break;
         case 4:
           setTimeout(app.secondPage.init(),0);
