@@ -145,6 +145,24 @@
 						url: "img/page-nove/animacao.gif",
 						alt: "animacao",
 						class: "elements"
+				},
+				{
+						elem: 'dez',
+						url: "img/page-dez/fundo.jpg",
+						alt: "fundo",
+						class: "elements"
+				},
+				{
+						elem: 'dez',
+						url: "img/page-quatro/chapeu.png",
+						alt: "chapeu",
+						class: "elements chapeu"
+				},
+				{
+						elem: 'dez',
+						url: "img/page-dez/pessoa.png",
+						alt: "pessoa",
+						class: "elements"
 				}
     ];
 
