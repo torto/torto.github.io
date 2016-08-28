@@ -9,6 +9,9 @@ var app = {};
         reloadButtons();
         preloadImages(imagens);
         $('.change-second').click(function() {
+            mixpanel.track("Paginas Acessadas",{
+              "page": "Click Botão Inicial"
+            });
             app.textDefault = $('select').val() === null ? 'pt-BR' : $('select').val();
             oFs.requestFullScreen(pageCentral[0]);
             $('.traducao').css('display', 'block');
