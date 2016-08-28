@@ -12,6 +12,13 @@
         <button id="btn-sair">Sair do modo full screen</button>
         <div id="page-central">
             <div class="page first-page">
+                <div class="input-field col s12 language">
+                    <select>
+                        <option value="" disabled selected>Choose your language</option>
+                        <option value="pt-BR">Português - BR</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
                 <img class="elements relative" src="img/apresentacao/fundo.jpg" alt="init"/>
                 <img class="elements" src="img/apresentacao/tortinhu.gif" alt="init"/>
                 <div class="container ajust-buttom">
@@ -29,30 +36,43 @@
                 </p>
             </div>
         </div>
-        <audio id="audioTrack" src="audio/teste.ogg" ontimeupdate="app.audio.updateListenerMusic(this);">
-            <track label="Portugues" kind="subtitles" srclang="pt" src="audio/teste.srt" default>
-                O seu navegador não suporta o elemento
-                <code>audio</code>.
-            </audio>
+        <audio id="audioTrack" src="audio/teste.ogg" ontimeupdate="app.audio.updateListenerMusic(this);"></audio>
 
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/Materialize/dist/js/materialize.min.js"></script>
+        <script src="js/libs/starlight.js" charset="utf-8"></script>
+        <script src="js/libs/blazy.min.js" charset="utf-8"></script>
+        <script src="js/pre-images.js" charset="utf-8"></script>
+        <script src="js/traducao.js" charset="utf-8"></script>
+        <script src="js/init.js" charset="utf-8"></script>
+        <script src="js/audio/audioController.js" charset="utf-8"></script>
+        <script src="js/page-dois/page-dois.js" charset="utf-8"></script>
+        <script src="js/page-tres/page-tres.js" charset="utf-8"></script>
+        <script src="js/page-quatro/page-quatro.js" charset="utf-8"></script>
+        <script src="js/page-cinco/page-cinco.js" charset="utf-8"></script>
+        <script src="js/page-seis/page-seis.js" charset="utf-8"></script>
+        <script src="js/page-sete/page-sete.js" charset="utf-8"></script>
+        <script src="js/page-oito/page-oito.js" charset="utf-8"></script>
+        <script src="js/page-nove/page-nove.js" charset="utf-8"></script>
+        <script src="js/page-dez/page-dez.js" charset="utf-8"></script>
 
-            <script src="bower_components/jquery/dist/jquery.min.js"></script>
-            <script src="bower_components/Materialize/dist/js/materialize.min.js"></script>
-            <script src="js/libs/starlight.js" charset="utf-8"></script>
-            <script src="js/libs/blazy.min.js" charset="utf-8"></script>
-            <script src="js/pre-images.js" charset="utf-8"></script>
-            <script src="js/traducao.js" charset="utf-8"></script>
-            <script src="js/init.js" charset="utf-8"></script>
-            <script src="js/audio/audioController.js" charset="utf-8"></script>
-            <script src="js/page-dois/page-dois.js" charset="utf-8"></script>
-            <script src="js/page-tres/page-tres.js" charset="utf-8"></script>
-            <script src="js/page-quatro/page-quatro.js" charset="utf-8"></script>
-            <script src="js/page-cinco/page-cinco.js" charset="utf-8"></script>
-            <script src="js/page-seis/page-seis.js" charset="utf-8"></script>
-            <script src="js/page-sete/page-sete.js" charset="utf-8"></script>
-            <script src="js/page-oito/page-oito.js" charset="utf-8"></script>
-            <script src="js/page-nove/page-nove.js" charset="utf-8"></script>
-            <script src="js/page-dez/page-dez.js" charset="utf-8"></script>
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                },
+                i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        </body>
-    </html>
+            ga('create', 'UA-63612158-2', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+    </body>
+</html>
