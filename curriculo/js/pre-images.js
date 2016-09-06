@@ -236,7 +236,7 @@ if(!window.app){
 						elem: 'onze',
 						url: "img/page-onze/boneco.png",
 						alt: "boneco",
-						class: "elements"
+						class: "elements boneco"
 				}
     ];
 

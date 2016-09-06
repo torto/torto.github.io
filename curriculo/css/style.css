@@ -9,6 +9,12 @@ html, body {
     display: none;
 }
 
+.black-white{
+  filter: gray;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+
 .hide {
     visibility: hidden;
 }
@@ -252,6 +258,10 @@ html, body {
     animation: starMove 1.5s linear infinite;
 }
 
+.page-onze .boneco{
+  animation: bonecoMovimento 4s ease-in-out infinite;
+}
+
 
 /*---------- ANIMATIONS -----------*/
 
@@ -314,5 +324,28 @@ html, body {
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes bonecoMovimento {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        /*transform: ;*/
+    }
+    25% {
+        transform: translate(500px, -150px) rotate(-10deg);;
+        /*transform: */
+    }
+    50% {
+      transform: translate(-500px, 150px) rotate(0deg);
+      /*transform: rotate(0deg);*/
+    }
+    75% {
+      transform: translate(500px, 0) rotate(-10deg);;
+      /*transform: rotate(-5deg);*/
+    }
+    100% {
+      transform: translate(0, 0px) rotate(0deg);
+      /*transform: rotate(0deg);*/
     }
 }
