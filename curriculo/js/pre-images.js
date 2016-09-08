@@ -237,6 +237,18 @@ if(!window.app){
 						url: "img/page-onze/boneco.png",
 						alt: "boneco",
 						class: "elements boneco"
+				},
+				{
+						elem: 'doze',
+						url: "img/apresentacao/fundo.jpg",
+						alt: "fundo",
+						class: "elements"
+				},
+				{
+						elem: 'doze',
+						url: "img/apresentacao/tortinhu.gif",
+						alt: "tortinhu",
+						class: "elements"
 				}
     ];
 
