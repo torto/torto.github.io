@@ -4,6 +4,10 @@ html, body {
     padding: 0;
     margin: 0;
 }
+.voltar-final{
+  z-index: 1;
+  position: absolute;
+}
 
 #btn-sair {
     display: none;

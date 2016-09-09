@@ -1,8 +1,6 @@
-<script type="text/javascript">
-	mixpanel.track("Paginas Acessadas",{
-		"page": "Final"
-	});
-</script>
+<div class="voltar-final">
+	<a href="" class="waves-effect pink lighten-1 btn">Voltar</a>
+</div>
 <div class="final">
     <div class="container">
         <div class="row no-margin">
@@ -70,3 +68,13 @@
     </div>
 
 </div>
+
+<script type="text/javascript">
+	mixpanel.track("Paginas Acessadas",{
+		"page": "Final"
+	});
+
+	$('.voltar-final').on('click', function(){
+		 location.reload();
+	})
+</script>
