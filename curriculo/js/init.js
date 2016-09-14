@@ -11,11 +11,12 @@ if (!window.app) {
         loadFull();
         preloadImages(app.imagens);
         $('.change-second').click(function() {
-            app.textDefault = $('select').val() === null ? 'pt-BR' : $('select').val();
-            oFs.requestFullScreen(pageCentral[0]);
-            $('.traducao').css('display', 'block');
-            changePage('second-page.html');
-            app.audio.playAudio();
+            app.audio.playAudio(function() {
+              app.textDefault = $('select').val() === null ? 'pt-BR' : $('select').val();
+              oFs.requestFullScreen(pageCentral[0]);
+              $('.traducao').css('display', 'block');
+              changePage('second-page.html');
+            });
             // changePage('page-tres.html');
             // changePage('page-quatro.html');
             // changePage('page-cinco.html');

@@ -66,8 +66,17 @@
             audio[0].pause();
         }
 
-        function playAudio() {
-            audio[0].play();
+        function playAudio(callback) {
+            var playPromise = audio[0].play();
+            if (playPromise !== undefined) {
+                playPromise.then(function() {
+                    callback();
+                }).catch(function(error) {
+                    console.error(error);
+                });
+            } else {
+                callback();
+            }
         }
 
         function formatSecondsAsTime(secs, format) {
