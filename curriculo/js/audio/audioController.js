@@ -15,18 +15,18 @@
         }
 
         function checkAudios() {
-            var source = "";
+            var source = location.protocol + '//' + location.host + location.pathname;
             if (typeof audio[0].canPlayType === 'function') {
                 var status = audio[0].canPlayType('audio/ogg');
                 if (!status) {
-                    source = audio[0].baseURI + 'audio/com-musica-compress.mp3';
+                    source += 'audio/com-musica-compress.mp3';
                 } else if (status == 'probably' || status == 'maybe') {
-                    source = audio[0].baseURI + 'audio/com-musica-compress.ogg';
+                    source += 'audio/com-musica-compress.ogg';
                 } else {
-                    source = audio[0].baseURI + 'audio/com-musica-compress.mp3';
+                    source += 'audio/com-musica-compress.mp3';
                 }
             } else {
-                source = audio[0].baseURI + 'audio/com-musica-compress.mp3';
+                source += 'audio/com-musica-compress.mp3';
             }
             audio[0].src = source;
         }
