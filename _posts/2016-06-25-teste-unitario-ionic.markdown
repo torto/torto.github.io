@@ -9,9 +9,9 @@ img-face: "/img/unit-test.jpg"
 ---
 ### Introdução
 
-Sei que muita gente tem dificuldades com testes unitário, pensando isso resolvi fazer alguns posts falando um pouco sobre isso. Sei que muita gente utiliza Ionic para desenvolver suas aplicações, nesse post vou ensinar você a configurar o Karma com Jasmine para que possa rodar seus testes unitários maravilhosos <3
+Sei que muita gente tem dificuldades com testes unitário, pensando nisso resolvi fazer alguns posts falando um pouco sobre esse assunto. Sei que muita gente utiliza Ionic para desenvolver suas aplicações, nesse post vou ensinar você a configurar o Karma com Jasmine para que possa rodar seus testes unitários maravilhosos <3
 
-Nós próximos posts falarei um pouco em como testar Controllers, Services e Directivas em AngularJS 1.x, legal que você pode encontrar muito material na internet sobre isso, mas focarei sempre no Cordova/Ionic para ajudar aqueles que estão a iniciar com o esse frame lindo.
+Nós próximos posts falarei um pouco em como testar Controllers, Services e Directivas em AngularJS 1.x, legal que você pode encontrar muito material na internet <3, mas focarei sempre no Cordova/Ionic para ajudar aqueles que estão a iniciar com o esse frame lindo.
 
 - **Teste unitário em Ionic - Parte 1**
 - Teste unitário em Ionic - Services - Parte 2
@@ -22,9 +22,9 @@ Caso queira dar uma olhada em como o projeto do teste esta ficando, ou tirar alg
 
 ### Instalar Ionic/Cordova
 
-Caso você já tenho o Ionic e o projeto criado não é necessários refazer esse processo, vamos instalar o Ionic/Cordova e criar um novo projeto padrão:
+Caso você já tenho o Ionic e o projeto criado não é necessário refazer esse processo, vamos instalar o Ionic/Cordova e criar um novo projeto padrão:
 
-Para instalar o Ionic digite isso no seu console:
+Para instalar o Ionic digite no seu console:
 
 > \# npm install -g cordova ionic
 
@@ -54,11 +54,11 @@ Você deverá fazer isso um por um, ou executar isso:
 
 > npm install --save-dev  angular-mocks jasmine-core jasmine-jquery jquery karma karma-coverage karma-jasmine karma-ng-html2js-preprocessor karma-phantomjs-launcher
 
-Feito agora vamos adicionar o arquivo de configuração do karma (karma.config.js):
+Feito, agora vamos adicionar o arquivo de configuração do karma na raíz do seu projeto (karma.config.js):
 
 <script src="//pastebin.com/embed_js/N4RutJne"></script>
 
-Vamos agora entender o que esse arquivo faz, primeiro é nesse arquivo que configuraremos como nosso karma irá funcionar.
+Vamos agora entender o que esse arquivo faz, primeiro é nele que configuraremos como nosso o teste irá funcionar.
 
 * basePath:  Seta qual o caminho base dos nossos diretórios;
 * frameworks: Seta quais os frames que utilizaremos para o teste, no caso usaremos jasmine;
@@ -74,15 +74,15 @@ Vamos agora entender o que esse arquivo faz, primeiro é nesse arquivo que confi
 * browsers: Seta os browser que executaram o teste;
 * singleRun: Seta se os testes executará uma única vez.
 
-Agora como setado no arquivo de configuração, todos os arquivos de testes, estarão na pasta “test”, e todos eles devem terminar com a palavra “Test.js” (IndexControllerTest.js), como o Ionic não cria essa pasta, vá na pasta raiz do seu projeto e crie ela.
+Agora como setado no arquivo de configuração, todos os arquivos de testes, estarão na pasta “test”, e todos eles devem terminar com a palavra “Test.js” (Ex:IndexControllerTest.js), como o Ionic não cria essa pasta, vá na pasta raiz do seu projeto e crie ela.
 
 ### Configuração do Gulp
 
-Agora vamos configurar o gulp para que execute seus testes, é super simples, vamos abrir o arquivos gulpfile.js e adicionar a dependência do karma para o gulp, para isso é só fazer o require do karma:
+Agora vamos configurar o gulp para que execute seus testes, é super simples, vamos abrir o arquivo gulpfile.js e adicionar a dependência do karma para o gulp, para isso é só fazer o require do karma:
 
 `var Server = require('karma').Server;`
 
-Depois disso vamos criar a task “test” e executar o karma:
+Depois criar a task “test” e executar o karma:
 
 `gulp.task('test', function(done) {
   new Server({
@@ -94,4 +94,4 @@ Salve o arquivo e estamos prontos para executar os nossos testes. Para testarmos
 
 > $ gulp test
 
-E pronto seus testes irão executar :D Até a próx.
+Pronto seus testes irão executar :D Até a próx.

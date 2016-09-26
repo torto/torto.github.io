@@ -5,17 +5,17 @@
     <description>Blog lindo do torto!</description>
     <link>http://torto.github.io/</link>
     <atom:link href="http://torto.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 26 Sep 2016 02:08:20 -0300</pubDate>
-    <lastBuildDate>Mon, 26 Sep 2016 02:08:20 -0300</lastBuildDate>
+    <pubDate>Mon, 26 Sep 2016 03:22:27 -0300</pubDate>
+    <lastBuildDate>Mon, 26 Sep 2016 03:22:27 -0300</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>Teste unitário em Ionic - Parte 1</title>
         <description>&lt;h3 id=&quot;introduo&quot;&gt;Introdução&lt;/h3&gt;
 
-&lt;p&gt;Sei que muita gente tem dificuldades com testes unitário, pensando isso resolvi fazer alguns posts falando um pouco sobre isso. Sei que muita gente utiliza Ionic para desenvolver suas aplicações, nesse post vou ensinar você a configurar o Karma com Jasmine para que possa rodar seus testes unitários maravilhosos &amp;lt;3&lt;/p&gt;
+&lt;p&gt;Sei que muita gente tem dificuldades com testes unitário, pensando nisso resolvi fazer alguns posts falando um pouco sobre esse assunto. Sei que muita gente utiliza Ionic para desenvolver suas aplicações, nesse post vou ensinar você a configurar o Karma com Jasmine para que possa rodar seus testes unitários maravilhosos &amp;lt;3&lt;/p&gt;
 
-&lt;p&gt;Nós próximos posts falarei um pouco em como testar Controllers, Services e Directivas em AngularJS 1.x, legal que você pode encontrar muito material na internet sobre isso, mas focarei sempre no Cordova/Ionic para ajudar aqueles que estão a iniciar com o esse frame lindo.&lt;/p&gt;
+&lt;p&gt;Nós próximos posts falarei um pouco em como testar Controllers, Services e Directivas em AngularJS 1.x, legal que você pode encontrar muito material na internet &amp;lt;3, mas focarei sempre no Cordova/Ionic para ajudar aqueles que estão a iniciar com o esse frame lindo.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Teste unitário em Ionic - Parte 1&lt;/strong&gt;&lt;/li&gt;
@@ -28,9 +28,9 @@
 
 &lt;h3 id=&quot;instalar-ioniccordova&quot;&gt;Instalar Ionic/Cordova&lt;/h3&gt;
 
-&lt;p&gt;Caso você já tenho o Ionic e o projeto criado não é necessários refazer esse processo, vamos instalar o Ionic/Cordova e criar um novo projeto padrão:&lt;/p&gt;
+&lt;p&gt;Caso você já tenho o Ionic e o projeto criado não é necessário refazer esse processo, vamos instalar o Ionic/Cordova e criar um novo projeto padrão:&lt;/p&gt;
 
-&lt;p&gt;Para instalar o Ionic digite isso no seu console:&lt;/p&gt;
+&lt;p&gt;Para instalar o Ionic digite no seu console:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;# npm install -g cordova ionic&lt;/p&gt;
@@ -72,11 +72,11 @@
   &lt;p&gt;npm install –save-dev  angular-mocks jasmine-core jasmine-jquery jquery karma karma-coverage karma-jasmine karma-ng-html2js-preprocessor karma-phantomjs-launcher&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Feito agora vamos adicionar o arquivo de configuração do karma (karma.config.js):&lt;/p&gt;
+&lt;p&gt;Feito, agora vamos adicionar o arquivo de configuração do karma na raíz do seu projeto (karma.config.js):&lt;/p&gt;
 
 &lt;script src=&quot;//pastebin.com/embed_js/N4RutJne&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Vamos agora entender o que esse arquivo faz, primeiro é nesse arquivo que configuraremos como nosso karma irá funcionar.&lt;/p&gt;
+&lt;p&gt;Vamos agora entender o que esse arquivo faz, primeiro é nele que configuraremos como nosso o teste irá funcionar.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;basePath:  Seta qual o caminho base dos nossos diretórios;&lt;/li&gt;
@@ -94,15 +94,15 @@
   &lt;li&gt;singleRun: Seta se os testes executará uma única vez.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Agora como setado no arquivo de configuração, todos os arquivos de testes, estarão na pasta “test”, e todos eles devem terminar com a palavra “Test.js” (IndexControllerTest.js), como o Ionic não cria essa pasta, vá na pasta raiz do seu projeto e crie ela.&lt;/p&gt;
+&lt;p&gt;Agora como setado no arquivo de configuração, todos os arquivos de testes, estarão na pasta “test”, e todos eles devem terminar com a palavra “Test.js” (Ex:IndexControllerTest.js), como o Ionic não cria essa pasta, vá na pasta raiz do seu projeto e crie ela.&lt;/p&gt;
 
 &lt;h3 id=&quot;configurao-do-gulp&quot;&gt;Configuração do Gulp&lt;/h3&gt;
 
-&lt;p&gt;Agora vamos configurar o gulp para que execute seus testes, é super simples, vamos abrir o arquivos gulpfile.js e adicionar a dependência do karma para o gulp, para isso é só fazer o require do karma:&lt;/p&gt;
+&lt;p&gt;Agora vamos configurar o gulp para que execute seus testes, é super simples, vamos abrir o arquivo gulpfile.js e adicionar a dependência do karma para o gulp, para isso é só fazer o require do karma:&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;var Server = require('karma').Server;&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Depois disso vamos criar a task “test” e executar o karma:&lt;/p&gt;
+&lt;p&gt;Depois criar a task “test” e executar o karma:&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gulp.task('test', function(done) {
   new Server({
@@ -116,7 +116,7 @@
   &lt;p&gt;$ gulp test&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;E pronto seus testes irão executar :D Até a próx.&lt;/p&gt;
+&lt;p&gt;Pronto seus testes irão executar :D Até a próx.&lt;/p&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 09:00:00 -0300</pubDate>
         <link>http://torto.github.io/2016/09/25/teste-unitario-ionic/</link>
