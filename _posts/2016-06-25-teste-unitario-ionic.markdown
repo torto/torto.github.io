@@ -6,12 +6,20 @@ date:       2016-09-25 12:00:00
 author:     "Torto"
 header-img: "img/top-ionic.jpg"
 ---
-
 ### Introdução
+
+<img src="/img/unit-test.jpg" style="margin: 0 auto;" width="250">
+
+
 
 Sei que muita gente tem dificuldades com testes unitário, pensando isso resolvi fazer alguns posts falando um pouco sobre isso. Sei que muita gente utiliza Ionic para desenvolver suas aplicações, nesse post vou ensinar você a configurar o Karma com Jasmine para que possa rodar seus testes unitários maravilhosos <3
 
 Nós próximos posts falarei um pouco em como testar Controllers, Services e Directivas em AngularJS 1.x, legal que você pode encontrar muito material na internet sobre isso, mas focarei sempre no Cordova/Ionic para ajudar aqueles que estão a iniciar com o esse frame lindo.
+
+- **Teste unitário em Ionic - Parte 1**
+- Teste unitário em Ionic - Services - Parte 2
+- Teste unitário em Ionic - Controllers - Parte 3
+- Teste unitário em Ionic - Directives - Parte 4
 
 Caso queira dar uma olhada em como o projeto do teste esta ficando, ou tirar alguma dúvida do cód. completo, esse é o [repositório](https://github.com/torto/unit-test-ionic).
 
@@ -89,4 +97,4 @@ Salve o arquivo e estamos prontos para executar os nossos testes. Para testarmos
 
 > $ gulp test
 
-E pronto seus testes irão executar :D
+E pronto seus testes irão executar :D Até a próx.
