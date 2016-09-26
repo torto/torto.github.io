@@ -3,17 +3,15 @@
   <channel>
     <title>Torto Blog</title>
     <description>Blog lindo do torto!</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 26 Sep 2016 01:43:53 -0300</pubDate>
-    <lastBuildDate>Mon, 26 Sep 2016 01:43:53 -0300</lastBuildDate>
+    <link>http://torto.github.io/</link>
+    <atom:link href="http://torto.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 26 Sep 2016 02:03:34 -0300</pubDate>
+    <lastBuildDate>Mon, 26 Sep 2016 02:03:34 -0300</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>Teste unitário em Ionic - Parte 1</title>
         <description>&lt;h3 id=&quot;introduo&quot;&gt;Introdução&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/unit-test.jpg&quot; style=&quot;margin: 0 auto;&quot; width=&quot;250&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Sei que muita gente tem dificuldades com testes unitário, pensando isso resolvi fazer alguns posts falando um pouco sobre isso. Sei que muita gente utiliza Ionic para desenvolver suas aplicações, nesse post vou ensinar você a configurar o Karma com Jasmine para que possa rodar seus testes unitários maravilhosos &amp;lt;3&lt;/p&gt;
 
@@ -118,11 +116,11 @@
   &lt;p&gt;$ gulp test&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;E pronto seus testes irão executar :D&lt;/p&gt;
+&lt;p&gt;E pronto seus testes irão executar :D Até a próx.&lt;/p&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 09:00:00 -0300</pubDate>
-        <link>/2016/09/25/teste-unitario-ionic/</link>
-        <guid isPermaLink="true">/2016/09/25/teste-unitario-ionic/</guid>
+        <link>http://torto.github.io/2016/09/25/teste-unitario-ionic/</link>
+        <guid isPermaLink="true">http://torto.github.io/2016/09/25/teste-unitario-ionic/</guid>
         
         
       </item>
@@ -181,8 +179,8 @@ $( function() {
 
 </description>
         <pubDate>Thu, 10 Sep 2015 09:00:00 -0300</pubDate>
-        <link>/2015/09/10/hack-day/</link>
-        <guid isPermaLink="true">/2015/09/10/hack-day/</guid>
+        <link>http://torto.github.io/2015/09/10/hack-day/</link>
+        <guid isPermaLink="true">http://torto.github.io/2015/09/10/hack-day/</guid>
         
         
       </item>
@@ -202,8 +200,8 @@ $( function() {
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 31 May 2015 09:00:00 -0300</pubDate>
-        <link>/2015/05/31/google-io-fb-nodejs/</link>
-        <guid isPermaLink="true">/2015/05/31/google-io-fb-nodejs/</guid>
+        <link>http://torto.github.io/2015/05/31/google-io-fb-nodejs/</link>
+        <guid isPermaLink="true">http://torto.github.io/2015/05/31/google-io-fb-nodejs/</guid>
         
         
       </item>
@@ -241,8 +239,8 @@ $( function() {
 &lt;/p&gt;
 </description>
         <pubDate>Thu, 06 Nov 2014 10:00:00 -0200</pubDate>
-        <link>/2014/11/06/um-amor-que-foi-para-o-ceu/</link>
-        <guid isPermaLink="true">/2014/11/06/um-amor-que-foi-para-o-ceu/</guid>
+        <link>http://torto.github.io/2014/11/06/um-amor-que-foi-para-o-ceu/</link>
+        <guid isPermaLink="true">http://torto.github.io/2014/11/06/um-amor-que-foi-para-o-ceu/</guid>
         
         
       </item>
@@ -307,8 +305,8 @@ $( function() {
 &lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 02 Oct 2014 09:00:00 -0300</pubDate>
-        <link>/2014/10/02/tche-mobile-e-um-tanto-sobre-liberdade/</link>
-        <guid isPermaLink="true">/2014/10/02/tche-mobile-e-um-tanto-sobre-liberdade/</guid>
+        <link>http://torto.github.io/2014/10/02/tche-mobile-e-um-tanto-sobre-liberdade/</link>
+        <guid isPermaLink="true">http://torto.github.io/2014/10/02/tche-mobile-e-um-tanto-sobre-liberdade/</guid>
         
         
       </item>
@@ -362,8 +360,8 @@ $( function() {
 &lt;p&gt;Se depender de minha pessoa o “movimento” do Software Livre nunca morrerá, porque nele eu encontro a liberdade, que em outros movimentos são apenas utópicos, mesmo se adaptando ao mundo capitalista, em minha profissão é o mais perto que posso chegar de um mundo mais igualitário ou um pouco mais justo.&lt;/p&gt;
 </description>
         <pubDate>Wed, 24 Sep 2014 09:00:00 -0300</pubDate>
-        <link>/2014/09/24/ftsl-um-guri-na-capital/</link>
-        <guid isPermaLink="true">/2014/09/24/ftsl-um-guri-na-capital/</guid>
+        <link>http://torto.github.io/2014/09/24/ftsl-um-guri-na-capital/</link>
+        <guid isPermaLink="true">http://torto.github.io/2014/09/24/ftsl-um-guri-na-capital/</guid>
         
         
       </item>

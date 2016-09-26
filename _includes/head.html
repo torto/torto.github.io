@@ -4,9 +4,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
+
+    <meta content="{% if page.title %}{{ page.title }}{% endif %}" name="title">
+    <meta content="{% if page.subtitle %}{{ page.subtitle }}{% endif %}" name="description">
+    <meta content="{{ page.img-face | prepend: site.url }}" name="preview">
+    <!-- Open Graph data -->
+    <meta content="{% if page.title %}{{ page.title }}{% endif %}" property="og:title">
+    <meta content="{% if page.subtitle %}{{ page.subtitle }}{% endif %}" property="og:description">
+    <meta content="{{site.url}}{{page.url}}" property="og:url">
+    <meta content="{{ page.img-face | prepend: site.url }}" property="og:image">
+    <!-- g+ -->
+    <meta content="{% if page.title %}{{ page.title }}{% endif %}" itemprop="name">
+    <meta content="{% if page.subtitle %}{{ page.subtitle }}{% endif %}" itemprop="description">
+    <meta content="{{ page.img-face | prepend: site.url }}" itemprop="image">
+
     <link rel="shortcut icon" href="{{ "/img/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
 
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 

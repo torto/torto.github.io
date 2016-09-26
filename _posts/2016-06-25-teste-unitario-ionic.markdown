@@ -5,12 +5,9 @@ subtitle:   "Configurar Karma para o Ionic"
 date:       2016-09-25 12:00:00
 author:     "Torto"
 header-img: "img/top-ionic.jpg"
+img-face: "/img/unit-test.jpg"
 ---
 ### Introdução
-
-<img src="/img/unit-test.jpg" style="margin: 0 auto;" width="250">
-
-
 
 Sei que muita gente tem dificuldades com testes unitário, pensando isso resolvi fazer alguns posts falando um pouco sobre isso. Sei que muita gente utiliza Ionic para desenvolver suas aplicações, nesse post vou ensinar você a configurar o Karma com Jasmine para que possa rodar seus testes unitários maravilhosos <3
 
