@@ -1,0 +1,47 @@
+.table-default {
+  margin-top: 19px;
+  border-top: 1px solid @color-grey-semi-dark !important;
+}
+.table-bordered > tbody > tr > td {
+  border-top: 1px solid @color-grey-semi-dark !important;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  .checkbox-table();
+}
+.table-bordered > tbody > tr:hover {
+  background: @color-yellow-light-another;
+  th {
+    border: none !important;
+  }
+}
+
+.table-select, .table-bordered .table-select:hover {
+  background: @color-blue-light;
+  border-left: 1px solid @color-blue-semi-light !important;
+  border-right: 1px solid @color-blue-semi-light !important;
+  td {
+    border-top: 1px solid @color-blue-semi-light !important;
+    border-bottom: 1px solid @color-blue-semi-light !important;
+  }
+  th {
+    border: none !important;
+  }
+}
+
+.table-bordered > tbody > tr {
+  th {
+    border: none;
+    color: @color-blue-dark;
+    background: @color-grey-semi-light;
+    font-size: 13px;
+    padding: 9px 9px 4px 10px;
+  }
+  td {
+    color: @color-blue-dark;
+    padding: 14px 9px 5px 10px;
+  }
+}
+.padding-table {
+  padding-right: 25px !important;
+}

@@ -1,0 +1,44 @@
+.menu-left{
+  position: fixed;
+  height: 100%;
+  width: 265px;
+  background: @color-blue;
+  left: 0;
+  top: 0;
+
+  header{
+    img{
+      margin: 20px auto;
+      display: block;
+    }
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0px;
+    li{
+      display: block;
+      padding: 20px;
+      label{
+        color: @color-white;
+        font-family: 'Roboto Slab';
+        vertical-align: middle;
+        text-transform: uppercase;
+        margin-left: 10px;
+      }
+      img.icon{
+        width: 30px;
+      }
+
+      img.arrow{
+        width: 20px;
+        float: right;
+        padding-top: 5px;
+      }
+
+      &.active{
+        background: fade(@color-black, 10%);
+      }
+    }
+  }
+}

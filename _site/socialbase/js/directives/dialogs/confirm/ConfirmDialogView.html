@@ -1,0 +1,16 @@
+<div ng-if="show" class="dialog">
+  <div class="dialog-confirm">
+    <div class="col-xs-10 col-xs-offset-1 text-center vertical-offset-1">
+        <img src="img/question.png" alt="" />
+    </div>
+    <div class="col-xs-10 col-xs-offset-1 text-center vertical-offset-2">
+      <label class="message">{{message}}</label>
+    </div>
+
+    <div class="action col-xs-8 col-xs-offset-2 text-center vertical-offset-2">
+      <button class="btn btn-danger pull-left" type="button" name="onOk" ng-click="clickOnOk();">{{labelOk}}</button>
+      <button class="btn btn-default pull-right"type="button" name="onCancel" ng-click="clickOnCancel();">{{labelCancel}}</button>
+    </div>
+
+  </div>
+</div>

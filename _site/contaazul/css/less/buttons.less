@@ -1,0 +1,39 @@
+.btn-green,
+.btn-green:focus,
+.btn-green:visited {
+  color: #fff;
+}
+.btn-green {
+  padding: 11px 15px 8px;
+  min-width: 140px;
+  font-weight: bold;
+  font-size: 13px;
+  background: @color-green-semi-dark;
+  .border_radius(3px);
+}
+.btn-green:hover {
+  .animate_ease();
+  color: @color-grey-light;
+  background: @color-green-btn-hover;
+}
+
+
+.btn-grey,
+.btn-grey:focus,
+.btn-grey:visited {
+  color: #fff;
+}
+.btn-grey {
+  padding: 11px 15px 8px;
+  min-width: 140px;
+  font-weight: bold;
+  font-size: 13px;
+  color: @color-blue-dark !important;
+  background: @color-grey-semi-light;
+  border: 1px solid @color-grey-semi-dark;
+  .border_radius(3px);
+}
+.btn-grey:hover {
+  .animate_ease();
+  background: @color-grey;
+}

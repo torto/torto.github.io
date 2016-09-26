@@ -1,0 +1,40 @@
+<div class="panel panel-default table-default">
+
+  <table ng-init="options.filtered = options.list" class="table table-hover table-bordered">
+    <tr>
+      <th class="">
+        		<input type="checkbox" ng-init="options.fullSelect = false" id="checkbox-1-1" ng-model="options.fullSelect" ng-click="setFullObject(options.filtered)" class="regular-checkbox checkbox-full" /><label for="checkbox-1-1"></label>
+      </th>
+      <th class="{{labels.size}}" ng-repeat="labels in options.labels">
+        {{labels.label}}
+      </th>
+    </tr>
+    <tr   ng-repeat="car in options.filtered | startFrom:options.currentPage*5 | limitTo:options.pageSize" >
+      <td>
+        <input type="checkbox" id="conteudo-{{$index}}" ng-click="selectItemTableDirective(car)" class="regular-checkbox" /><label for="conteudo-{{$index}}"></label>
+      </td>
+      <td ng-click="onClickItem()(car)" ng-class="{'text-right padding-table' : (options.labels.length - 1) == $index}" ng-repeat="labels in options.labels">
+        <p  ng-if="labels.value !== 'imagem' && labels.value !== 'valor'">{{car[labels.value]}}</p>
+        <p  ng-if="labels.value !== 'imagem' && car[labels.value] == null && car[labels.value] == undefined">Sem Valor</p>
+
+        <p ng-if="labels.value == 'valor'">{{car[labels.value] | currency: ''}} </p>
+
+        <p ng-if="labels.value == 'imagem' && (car[labels.value] == null || car[labels.value] == undefined)">Sem Foto</p>
+        <p ng-if="labels.value == 'imagem' && car[labels.value] !== null && car[labels.value] !== undefined">
+          <a href="{{car[labels.value]}}" target="_blank">Imagem</a>
+        </p>
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="text-center" ng-if="pagination">
+    <nav>
+  <ul class="pagination ">
+    <li ng-class="{'disabled': options.currentPage == 0}" ><a href="" ng-click="changePageTableDirective(options.currentPage - 1)" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+    <li ng-class="{'active': options.currentPage === $index}" ng-repeat="i in options.totalPages | range"><a ng-click="changePageTableDirective($index)" href="">{{($index+1)}}</a></li>
+    <li ng-class="{'disabled': (options.currentPage+1) == options.totalPages}" ><a href="" ng-click="changePageTableDirective(options.currentPage + 1)" aria-label="next"><span aria-hidden="true">&raquo;</span></a></li>
+  </ul>
+</nav>
+  </div>

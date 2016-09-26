@@ -5,9 +5,118 @@
     <description>Blog lindo do torto!</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 10 Sep 2015 17:56:04 -0300</pubDate>
-    <lastBuildDate>Thu, 10 Sep 2015 17:56:04 -0300</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Mon, 26 Sep 2016 00:06:47 -0300</pubDate>
+    <lastBuildDate>Mon, 26 Sep 2016 00:06:47 -0300</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Teste unitário em Ionic - Parte 1</title>
+        <description>&lt;h3 id=&quot;introduo&quot;&gt;Introdução&lt;/h3&gt;
+
+&lt;p&gt;Sei que muita gente tem dificuldades com testes unitário, pensando isso resolvi fazer alguns posts falando um pouco sobre isso. Sei que muita gente utiliza Ionic para desenvolver suas aplicações, nesse post vou ensinar você a configurar o Karma com Jasmine para que possa rodar seus testes unitários maravilhosos &amp;lt;3&lt;/p&gt;
+
+&lt;p&gt;Nós próximos posts falarei um pouco em como testar Controllers, Services e Directivas em AngularJS 1.x, legal que você pode encontrar muito material na internet sobre isso, mas focarei sempre no Cordova/Ionic para ajudar aqueles que estão a iniciar com o esse frame lindo.&lt;/p&gt;
+
+&lt;p&gt;Caso queira dar uma olhada em como o projeto do teste esta ficando, ou tirar alguma dúvida do cód. completo, esse é o &lt;a href=&quot;https://github.com/torto/unit-test-ionic&quot;&gt;repositório&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;instalar-ioniccordova&quot;&gt;Instalar Ionic/Cordova&lt;/h3&gt;
+
+&lt;p&gt;Caso você já tenho o Ionic e o projeto criado não é necessários refazer esse processo, vamos instalar o Ionic/Cordova e criar um novo projeto padrão:&lt;/p&gt;
+
+&lt;p&gt;Para instalar o Ionic digite isso no seu console:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;# npm install -g cordova ionic&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ ionic start NomeApp tabs&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ cd NomeApp&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;configurao-do-karma&quot;&gt;Configuração do Karma&lt;/h3&gt;
+
+&lt;p&gt;Agora vamos adicionar as seguintes dependências no nosso projeto, lembrando que iremos utilizar o node(npm) para fazer o download dos mesmo.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;angular-mocks: Dependência que criar mocks no AngularJS;&lt;/li&gt;
+  &lt;li&gt;jasmine-core: Dep. de teste Jasmine;&lt;/li&gt;
+  &lt;li&gt;jasmine-jquery: Dep. que usaremos para carregar Jsons para mockar resultados de banco de dados;&lt;/li&gt;
+  &lt;li&gt;jquery: Dep. necessária para rodar o jasmine-jquery, caso tenha add no bower do teu projeto, não se faz necessário baixar novamente;&lt;/li&gt;
+  &lt;li&gt;karma: Dep. que executa os testes do Jasmine;&lt;/li&gt;
+  &lt;li&gt;karma-coverage: Dep. que vai fazer a análise de onde e a porcentagem que seu teste está cobrindo;&lt;/li&gt;
+  &lt;li&gt;karma-jasmine: Dep. que faz o link do karma com o Jasmine;&lt;/li&gt;
+  &lt;li&gt;karma-ng-html2js-preprocessor: Dep. que mock todos os htmls para JS, usaremos quando formos testar directivas;&lt;/li&gt;
+  &lt;li&gt;karma-phantomjs-launcher: Dep. de executa o karma no PhantomJS, browser que roda no terminal.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para fazer o download basta você executar o seguinte código:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;npm install –save-dev DEPENDÊNCIA&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Você deverá fazer isso um por um, ou executar isso:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;npm install –save-dev  angular-mocks jasmine-core jasmine-jquery jquery karma karma-coverage karma-jasmine karma-ng-html2js-preprocessor karma-phantomjs-launcher&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Feito agora vamos adicionar o arquivo de configuração do karma (karma.config.js):&lt;/p&gt;
+
+&lt;script src=&quot;//pastebin.com/embed_js/N4RutJne&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Vamos agora entender o que esse arquivo faz, primeiro é nesse arquivo que configuraremos como nosso karma irá funcionar.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;basePath:  Seta qual o caminho base dos nossos diretórios;&lt;/li&gt;
+  &lt;li&gt;frameworks: Seta quais os frames que utilizaremos para o teste, no caso usaremos jasmine;&lt;/li&gt;
+  &lt;li&gt;files: Seta quais os arquivos que serão carregados pelo karma para rodar os testes, lembre-se que aqui deve adicionar todas as dependências utilizadas no seu sistema;&lt;/li&gt;
+  &lt;li&gt;ngHtml2JsPreprocessor: Configuração do plugin que transforma todo html em js para que possamos testar as directives;&lt;/li&gt;
+  &lt;li&gt;exclude: Seta os arquivos que não devem ser carregados pelo karma;&lt;/li&gt;
+  &lt;li&gt;preprocessors: Seta no karma os plugins que iremos utilizar;&lt;/li&gt;
+  &lt;li&gt;reporters: Seta quais os relatórios o karma ira utilizar;&lt;/li&gt;
+  &lt;li&gt;port: Seta qual a porta que utilizaremos para rodar o karma;&lt;/li&gt;
+  &lt;li&gt;colors: Seta se o console terá cor;&lt;/li&gt;
+  &lt;li&gt;logLevel: Seta qual o tipo de log que exibira no terminal;&lt;/li&gt;
+  &lt;li&gt;autoWatch: Seta se o a cada alteração no teu cód. o karma execute novamente os testes;&lt;/li&gt;
+  &lt;li&gt;browsers: Seta os browser que executaram o teste;&lt;/li&gt;
+  &lt;li&gt;singleRun: Seta se os testes executará uma única vez.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Agora como setado no arquivo de configuração, todos os arquivos de testes, estarão na pasta “test”, e todos eles devem terminar com a palavra “Test.js” (IndexControllerTest.js), como o Ionic não cria essa pasta, vá na pasta raiz do seu projeto e crie ela.&lt;/p&gt;
+
+&lt;h3 id=&quot;configurao-do-gulp&quot;&gt;Configuração do Gulp&lt;/h3&gt;
+
+&lt;p&gt;Agora vamos configurar o gulp para que execute seus testes, é super simples, vamos abrir o arquivos gulpfile.js e adicionar a dependência do karma para o gulp, para isso é só fazer o require do karma:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;var Server = require('karma').Server;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Depois disso vamos criar a task “test” e executar o karma:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gulp.task('test', function(done) {
+  new Server({
+    configFile: __dirname + '/karma.config.js'
+  }, done).start();
+});&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Salve o arquivo e estamos prontos para executar os nossos testes. Para testarmos se tudo esta certinho, basta executar:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ gulp test&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;E pronto seus testes irão executar :D&lt;/p&gt;
+</description>
+        <pubDate>Sun, 25 Sep 2016 09:00:00 -0300</pubDate>
+        <link>/2016/09/25/teste-unitario-ionic/</link>
+        <guid isPermaLink="true">/2016/09/25/teste-unitario-ionic/</guid>
+        
+        
+      </item>
     
       <item>
         <title>HackDay do Grupo Hacker PatoLivre</title>
@@ -57,7 +166,7 @@
 &lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 $( function() {
-    $( &#39;#gallery&#39; ).jGallery();
+    $( '#gallery' ).jGallery();
 } );
 &lt;/script&gt;
 

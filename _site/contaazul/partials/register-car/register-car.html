@@ -1,0 +1,99 @@
+<div class="main-index">
+
+  <header-fixed></header-fixed>
+  <div class="container content-main">
+    <div class="row margin-link">
+      <div class="col-md-12 none-padding">
+        <a class="text-link" ng-click="cleanAlter()" href="./">Início</a>
+        <span class="text-grey-semi-dark dote-text">&#62;</span>
+        <span class="text-blue">Cadastro de Carros</span>
+      </div>
+    </div>
+  </div>
+  <form class="" name="register-car" ng-submit="saveCar()">
+    <div class="container text-blue" id="content-white">
+      <div class="cut-page"></div>
+      <div class="content-form">
+        <div class="row">
+          <div class="col-md-12 title-page none-padding">
+            <p>
+              Cadastro de Carros
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 title-line none-padding">
+            <p>Complete com os dados do Carro</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="row">
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Placa</label>
+                <input class="form-control" ng-model="car.placa" placeholder="AAA-1234" required type="text">
+                <small class="error" ng-show="register-car.placa.$error.required">Erro</small>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Marca</label>
+                <input class="form-control" ng-model="car.marca" placeholder="Informe a marca do carro" required type="text">
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Modelo</label>
+                <input class="form-control" ng-model="car.modelo" placeholder="Informe o modelo do carro" required type="text">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="select-combustivel">Combustível</label>
+                <select class="form-control select-arrow" id="select-combustivel" ng-model="car.combustivel">
+                  <option value="Gasolina">Gasolina</option>
+                  <option value="Álcool">Álcool</option>
+                  <option value="Flex">Flex</option>
+                </select>
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Imagem</label>
+                <input class="form-control" ng-model="car.imagem" placeholder="Informe a imagem do carro"  type="text">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Valor</label>
+                <input class="form-control" ng-model="car.valor" placeholder="Informe o valor do carro"  type="text">
+              </div>
+            </div>
+          </div>
+          <div class="space"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="space"></div>
+    <div class="row content-main none-padding">
+      <div class="col-md-2 none-padding">
+        <a class="btn btn-grey" ng-click="cleanAlter()" href="./">Cancelar</a>
+      </div>
+      <div class="col-md-4 col-md-offset-6 none-padding">
+        <button class="btn btn-green btn-block" type="submit" ng-disabled="register-car.$invalid" href="./">Salvar Carro</button>
+      </div>
+    </div>
+
+  </form>
+  <div class="space"></div>
+</div>
