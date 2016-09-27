@@ -13,10 +13,12 @@ Sei que muita gente tem dificuldades com testes unitário, pensando nisso resolv
 
 Nós próximos posts falarei um pouco em como testar Controllers, Services e Directivas em AngularJS 1.x, legal que você pode encontrar muito material na internet <3, mas focarei sempre no Cordova/Ionic para ajudar aqueles que estão a iniciar com o esse frame lindo.
 
+### Sequência de posts
+
 - **Teste unitário em Ionic - Parte 1**
-- Teste unitário em Ionic - Services - Parte 2
-- Teste unitário em Ionic - Controllers - Parte 3
-- Teste unitário em Ionic - Directives - Parte 4
+- [Teste unitário em Ionic - Services - Parte 2]({{site.url}}/2016/09/26/teste-unitario-ionic-parte2/)
+- *Teste unitário em Ionic - Controllers - Parte 3*
+- *Teste unitário em Ionic - Directives - Parte 4*
 
 Caso queira dar uma olhada em como o projeto do teste esta ficando, ou tirar alguma dúvida do cód. completo, esse é o [repositório](https://github.com/torto/unit-test-ionic).
 
