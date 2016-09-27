@@ -24,7 +24,7 @@ Caso queira dar uma olhada em como o projeto do teste esta ficando, ou tirar alg
 
 ### Instalar Ionic/Cordova
 
-Caso você já tenho o Ionic e o projeto criado não é necessário refazer esse processo, vamos instalar o Ionic/Cordova e criar um novo projeto padrão:
+Caso você já tenha o Ionic e o projeto criado não é necessário refazer esse processo, vamos instalar o Ionic/Cordova e criar um novo projeto padrão:
 
 Para instalar o Ionic digite no seu console:
 

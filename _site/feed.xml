@@ -5,8 +5,8 @@
     <description>Blog lindo do torto!</description>
     <link>http://torto.github.io/</link>
     <atom:link href="http://torto.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 26 Sep 2016 21:51:57 -0300</pubDate>
-    <lastBuildDate>Mon, 26 Sep 2016 21:51:57 -0300</lastBuildDate>
+    <pubDate>Tue, 27 Sep 2016 08:56:17 -0300</pubDate>
+    <lastBuildDate>Tue, 27 Sep 2016 08:56:17 -0300</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -17,7 +17,7 @@
 
 &lt;p&gt;Mesmo sabendo disso muitas pessoas se sentem perdidas em como e oque testar em seus sistemas, posso ser utópico e dizer que você &lt;strong&gt;deve testar TUDO ter um coverage de 100%&lt;/strong&gt;, mas será que se faz necessário isso? Sim faz AhhahAA, mas sei que no dia-a-dia fazer um coverage de 100% é meio difícil, pelo motivo principal: &lt;strong&gt;cód. legado&lt;/strong&gt; e muitos outros fatores.&lt;/p&gt;
 
-&lt;p&gt;Mas não se desespere meu amigo, fazer teste é uma coisa que demora de fato a aprender e na persistência você realmente vai aprender, então o melhor e principal passo inicial é fazer teste mesmo errando, nesse post vou dar algumas dicas que utilizo para conseguir fazer meus testes espero que ajude a você nesse divisor de águas que são os testes automatizados.&lt;/p&gt;
+&lt;p&gt;Mas não se desespere meu amigo, fazer teste é uma coisa que demora de fato a aprender e na persistência você realmente vai aprender, então o melhor e principal passo para começar a testar é fazer os testes mesmo errando, nesse post vou dar algumas dicas que utilizo para conseguir fazer os testes espero que ajude você nesse divisor de águas que são os testes automatizados.&lt;/p&gt;
 
 &lt;h3 id=&quot;sequncia-de-posts&quot;&gt;Sequência de posts&lt;/h3&gt;
 
@@ -30,7 +30,7 @@
 
 &lt;h3 id=&quot;testando-um-service&quot;&gt;Testando um Service&lt;/h3&gt;
 
-&lt;p&gt;Neste post vou ensinar você a testar um Service do AngularJs, para efeito prático usarei o exemplo padrão que vem no Ionic, nesse exemplo é simulado um app de chat, no service da aplicação existe um array com todas as mensagens e três métodos, um para pegar todas as mensagens(all), outro para pegar uma mensagem específica(get) e o último para remover uma mensagem(remove).&lt;/p&gt;
+&lt;p&gt;Neste post vou ensinar a testar um Service do AngularJs, para efeito prático usarei o exemplo padrão que vem no Ionic, nesse exemplo é simulado um app de chat, no service da aplicação existe um array com todas as mensagens e três métodos, um para pegar todas as mensagens(all), outro para pegar uma mensagem específica(get) e o último para remover uma mensagem(remove).&lt;/p&gt;
 
 &lt;p&gt;Então vamos lá, esse é o cód. do service:&lt;/p&gt;
 
@@ -44,7 +44,7 @@
 
 &lt;p&gt;Sabemos que existe três funções, vamos escolher a do método .all() para iniciar nossos testes, primeiro vamos configurar nosso arquivo de teste para conseguir mockar nosso service, para isso é preciso entender como funciona o teste com Jasmine.&lt;/p&gt;
 
-&lt;p&gt;Para iniciar o teste é preciso setar um &lt;code class=&quot;highlighter-rouge&quot;&gt;describe&lt;/code&gt;, nele existe dois parâmetros, o primeiro é uma String, que nela você vai colocar qual o significado daquele teste, o segundo parâmetro é uma function() e dentro dela você iniciará seus testes.
+&lt;p&gt;Para iniciar é preciso setar um &lt;code class=&quot;highlighter-rouge&quot;&gt;describe&lt;/code&gt;, nele existe dois parâmetros, o primeiro é uma String, nela você vai colocar qual o significado daquele teste, o segundo parâmetro é uma function(), dentro dela você iniciará seus testes.
 Para iniciar seus asserts é preciso criar outro método e ele se chama &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt;, tem as mesmas características do &lt;code class=&quot;highlighter-rouge&quot;&gt;describe&lt;/code&gt;, uma String e uma função, agora sim dentro dessa função você vai passar seus &lt;code class=&quot;highlighter-rouge&quot;&gt;expect&lt;/code&gt;. Você pode ficar confuso no início com tudo isso mas depois se acostuma.&lt;/p&gt;
 
 &lt;p&gt;Então vamos criar um arquivo dentro da pasta &lt;code class=&quot;highlighter-rouge&quot;&gt;tabs&lt;/code&gt; chamado: &lt;code class=&quot;highlighter-rouge&quot;&gt;ChatServiceTest.js&lt;/code&gt; e segue o cód. inicial dos testes:&lt;/p&gt;
@@ -53,26 +53,26 @@ Para iniciar seus asserts é preciso criar outro método e ele se chama &lt;code
 
 &lt;p&gt;Nesse momento apenas estruturamos nosso arquivo de teste para que possamos iniciar nossos &lt;code class=&quot;highlighter-rouge&quot;&gt;asserts&lt;/code&gt;, o primeiro &lt;code class=&quot;highlighter-rouge&quot;&gt;describe&lt;/code&gt; coloco uma descrição de qual é o nome do nosso service, as próximas três linhas são as configurações para pegar o arquivo json e inserir numa variável, o &lt;code class=&quot;highlighter-rouge&quot;&gt;beforeEach&lt;/code&gt; executará todas as vezes antes de executar cada &lt;code class=&quot;highlighter-rouge&quot;&gt;describe&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;No &lt;code class=&quot;highlighter-rouge&quot;&gt;beforeEach&lt;/code&gt; no injetamos no teste os nossos modulos da aplicação, como nosso service é independente, ou seja, não há injeção de outros services nele, iremos inserir somente o &lt;code class=&quot;highlighter-rouge&quot;&gt;starter.services&lt;/code&gt;, em seguida vamos injetar na nossa variável &lt;code class=&quot;highlighter-rouge&quot;&gt;service&lt;/code&gt; o service que vamos testar chamado &lt;code class=&quot;highlighter-rouge&quot;&gt;Chats&lt;/code&gt;, isso faz com que injetamos todos os métodos e variáveis do service requerido a essa variável (Mockamos o service &amp;lt;3).&lt;/p&gt;
+&lt;p&gt;No &lt;code class=&quot;highlighter-rouge&quot;&gt;beforeEach&lt;/code&gt; no injetamos no teste os nossos modulos da aplicação, como nosso service é independente, ou seja, não há injeção de outros services nele, iremos inserir somente o &lt;code class=&quot;highlighter-rouge&quot;&gt;starter.services&lt;/code&gt;, em seguida vamos injetar na nossa variável &lt;code class=&quot;highlighter-rouge&quot;&gt;service&lt;/code&gt; o service que vamos testar chamado &lt;code class=&quot;highlighter-rouge&quot;&gt;Chats&lt;/code&gt;, isso faz com que injetamos todos os métodos e variáveis do service requerido a essa variável (Mockamos ele &amp;lt;3).&lt;/p&gt;
 
-&lt;p&gt;Sempre que vamos testar um conjunto de coisas parecidas criamos um &lt;code class=&quot;highlighter-rouge&quot;&gt;describe&lt;/code&gt; novo, como nosso código é pequeno usaremos um único &lt;code class=&quot;highlighter-rouge&quot;&gt;describe&lt;/code&gt; para testar todo nosso service, em seguida criaremos o nosso &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt;, lembre-se que as Strings são muito importante para você conseguir identificar em que parte seu cód. esta quebrando e essas strings na hora de exibir o erro vão se concatenar, então pense nelas como um texto &amp;lt;3&lt;/p&gt;
+&lt;p&gt;Sempre que vamos testar um conjunto de coisas parecidas criamos um &lt;code class=&quot;highlighter-rouge&quot;&gt;describe&lt;/code&gt; novo, como nosso código é pequeno usaremos um único &lt;code class=&quot;highlighter-rouge&quot;&gt;describe&lt;/code&gt; para testar tudo, em seguida criaremos o nosso &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt;, lembre-se que as Strings são muito importante para você conseguir identificar em que parte seu cód. esta quebrando e essas strings na hora de exibir o erro vão se concatenar, então pense nelas como um texto &amp;lt;3&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://torto.github.io/img/unity-test-ionic/error.png&quot; alt=&quot;Error in test&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Agora dentro do &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt; vamos de fato executar nosso teste, vamos verificar se os dados que o método all() retorna é o mesmo que tem no nosso arquivo json.&lt;/p&gt;
+&lt;p&gt;Agora dentro do &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt; vamos de fato executar nosso teste, vamos verificar se os dados que o método all() retorna é o mesmo que retorna nosso arquivo json.&lt;/p&gt;
 
 &lt;script src=&quot;//pastebin.com/embed_js/d8ii81sH&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Agora vamos executar o teste para ver se ele passa, então basta digitar &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp test&lt;/code&gt; e ver se aparece o verde da alegria, deve aparecer em verde que você possui 1 teste e que esse teste passou &amp;lt;3 e ao mesmo tempo você vai ver o relatório do coverage todo em vermelho, porque ainda falta muita coisa para testarmos &amp;lt;3.&lt;/p&gt;
+&lt;p&gt;Vamos executar o teste para ver se ele passa, basta digitar &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp test&lt;/code&gt; no terminal e ver se aparece o verde da alegria, deve aparecer em verde que você possui 1 teste e que esse teste passou &amp;lt;3 e ao mesmo tempo você vai ver o relatório do coverage todo em vermelho, porque ainda falta muita coisa para testarmos &amp;lt;3.&lt;/p&gt;
 
-&lt;p&gt;Uma dica importante é que quando executamos o teste ele gera um relatório em html na pasta &lt;code class=&quot;highlighter-rouge&quot;&gt;coverage&lt;/code&gt; que fica na pasta raiz do projeto, se você entrar lá vai ver todos seus js e se entrar em seu service vai ver quantas vezes o teste passa em cada método e variável do arquivo e em vermelho lugares que ainda não testou, isso é lindo porque fica visível os lugares que faltam testar.&lt;/p&gt;
+&lt;p&gt;Uma dica importante é que quando executamos o teste ele gera um relatório em html na pasta &lt;code class=&quot;highlighter-rouge&quot;&gt;coverage&lt;/code&gt; na pasta raiz do projeto, abra o arquivo html e veja seu service nele vai conter quantas vezes os testes passam em cada método e variável do arquivo e em vermelho lugares que ainda não testou, isso é lindo porque fica visível os lugares que faltam testar.&lt;/p&gt;
 
 &lt;p&gt;Vamos agora testar o método get(), para isso vamos criar um &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt; e executar o método get passando o parâmetro com valor 0 e ver se retorna o primeiro valor do array, segue o cód:&lt;/p&gt;
 
 &lt;script src=&quot;//pastebin.com/embed_js/8DvQ7QGd&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;Está ficando mais fácil entender como os testes funcionam né? Então vamos testar o remove(), só gostaria de lembrar que cada teste depende muito do contexto de cada ação do seu método, então não se acanhe com o tempo você vai pegando o jeitinho &amp;lt;3.
-No nosso teste iremos excluir o primeiro valor do nosso array e verificar se nosso array mockado está igual ao array que vem do método:&lt;/p&gt;
+No nosso teste iremos excluir o primeiro valor do nosso array e verificar se nosso array mockado está diferente do array que vem do método:&lt;/p&gt;
 
 &lt;script src=&quot;//pastebin.com/embed_js/bFZeqe2S&quot;&gt;&lt;/script&gt;
 
@@ -117,7 +117,7 @@ Aparece em vermelho a seguinte linha &lt;code class=&quot;highlighter-rouge&quot
 
 &lt;h3 id=&quot;instalar-ioniccordova&quot;&gt;Instalar Ionic/Cordova&lt;/h3&gt;
 
-&lt;p&gt;Caso você já tenho o Ionic e o projeto criado não é necessário refazer esse processo, vamos instalar o Ionic/Cordova e criar um novo projeto padrão:&lt;/p&gt;
+&lt;p&gt;Caso você já tenha o Ionic e o projeto criado não é necessário refazer esse processo, vamos instalar o Ionic/Cordova e criar um novo projeto padrão:&lt;/p&gt;
 
 &lt;p&gt;Para instalar o Ionic digite no seu console:&lt;/p&gt;
 
