@@ -10,7 +10,9 @@ if (!window.app) {
         initVariables();
         loadFull();
         preloadImages(app.imagens);
+        app.textDefault = $('select').val() === null ? 'pt-BR' : $('select').val();
         $('.change-second').click(function() {
+          app.textDefault = $('select').val() === null ? 'pt-BR' : $('select').val();
             oFs.requestFullScreen(pageCentral[0]);
             app.audio.playAudio(function() {
                 app.textDefault = $('select').val() === null ? 'pt-BR' : $('select').val();
