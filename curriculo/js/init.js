@@ -11,6 +11,7 @@ if (!window.app) {
         loadFull();
         preloadImages(app.imagens);
         $('.change-second').click(function() {
+            app.textDefault = $('select').val() === null ? 'pt-BR' : $('select').val();
             oFs.requestFullScreen(pageCentral[0]);
             app.audio.playAudio(function() {
                 app.textDefault = $('select').val() === null ? 'pt-BR' : $('select').val();
